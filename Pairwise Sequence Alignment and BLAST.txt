@@ -1,0 +1,87 @@
+
+
+#################################################################################################################################################################
+
+Lecture 4: Pairwise Sequence Alignment and Basic Local Alignment Search Tool (BLAST)
+Instructor: Dr Loren Gragert, Assistant Professor, Department of Pathology and Laboratory Medicine, Tulane School of Medicine
+
+
+#####################################INSTALLATION INSTRUCTIONS###################################################################################################
+
+#### Install python3 or higher 
+brew install python3
+
+
+Python3.4 or higher installs pip3 as part of stock install. Pip is python package manager.
+
+
+#### Install biopython
+pip3 install biopython
+
+################################################################################################################################################################
+################################################################################################################################################################
+
+####Instructions for running BLAST web tool
+
+Mammalian genome has abundant transposable elements (TE) that consist of  DNA transposons and retrotransposons. Retrotransposons are a subclass that 
+mobilize through RNA intermediates. They closely resemble and hence may be derived from retrovirus. The high density of TE in human genome may be suggestive 
+of evolutionary significance with a vital role in normal physiology as well as pathogenesis. 
+
+One such example of retrotransposons has potential neurological significance. Synaptic plasticity of neurons governs the learning and adaptive capability of the brain and this is reported to be hampered in disorders like Alzheimer's disease, schizophrenia etc. The Arc gene that encodes Activity Regulated Cytoskeleton Associated Protein is essential for synaptic plasticity. A recent study by Pastuzyn et al., indicates that Arc gene encodes a retrotransposon and has indicated it's similarity with a retroviral protein. 
+
+
+In this exercise we will find out if there is any homology of this retrotransposon with retroviruses.
+
+
+
+Exercise 1: Run BLAST web tool to do the homology analysis of ARC retrotransposon. 
+
+
+	Open the blast home page at https://blast.ncbi.nlm.nih.gov/Blast.cgi
+
+	Select on the Protein BLAST page and then either paste the ARC protein fasta sequence or enter the accession number or upload the FASTA file (provided)
+
+	Give your submission job a title, select a database (nr is default or refSeq), run BLAST
+
+	To run the BLAST only for retroviruses type "Retro-transcribing viruses" in Organism column
+
+	Enlist the viral proteins and viruses that show similarity with ARC protein
+
+	Run BLAST and try changing the Expect threshold and Matrix to see changes in the output of similar results
+
+
+
+Exercise 2: Running BLAST with biopython	
+
+	Biopython is an open source python tool that has classes and modules that can be used for bioinformatics tasks. BLAST can be run locally using NCBI standalone BLAST tool. Biopython offers a better deal as it runs the BLAST and gets the output, as well as parses the BLAST output for further analysis.
+
+
+	1 Open terminal and change working directory to current
+
+	2 chmod 775 *sh
+
+	3 bash blast_setup.sh
+
+	4 move ARC_sequence.fasta, biopython_blast.py, blast_run.sh, blast_output_parser.py to ncbi-blast-2.7.1+/blastdb directory
+
+	5 bash blast_run.sh (Runs NCBI local blast of ARC protein sequence and Viral proteome to give blast output as out.txt)
+
+	6 python3 biopython_blast.py (Runs NCBI BLAST by bipython of ARC protein sequence and Viral proteome to give blast output as blast_output.xml)
+
+	7 python3 blast_output_parser.py (parses the XML file and gets the output in BLAST_results.csv)
+
+
+
+
+
+
+Exercise 3: Modifying the scripts 
+
+
+
+
+
+
+################################################################################################################################################################
+
+################################################################################################################################################################
