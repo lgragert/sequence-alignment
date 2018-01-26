@@ -48,9 +48,6 @@ Open terminal and paste /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercon
 
 	brew install python3
 
-4 NCBI BLAST
-	
-	brew install blast
 
 5 Biopython 
 
