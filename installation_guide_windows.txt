@@ -1,0 +1,72 @@
+
+################################################################################################################################################
+
+													WINDOWS SOFTWARE INSTLLATION GUIDE
+
+################################################################################################################################################
+
+1 Chocolatey package manager (https://chocolatey.org/)
+
+
+Open an admin Powershell Window - right-click Run As Administrator -Powershell can be "Run As Administrator" by default by doing the following: 
+
+1) search Powershell from Windows Explorer (or Cortana if using Windows 10 and pin to taskbar) 
+
+2) after pinning to taskbar, right-click the Powershell icon on the taskbar 
+
+3) right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties" 
+
+4) Under "Shortcut tab" left-click "Advanced..." button" 
+
+5) make sure the box next to "Run As Administrator" is checked and then click "Apply"
+
+
+Set-ExecutionPolicy UnRestricted
+
+iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+
+. $profile
+
+
+
+2 Cygwin - Unix functionality
+
+	choco install cygwin
+
+
+3 PuTTY- SSH
+
+	choco install putty 
+
+3 R and rstudio
+
+	choco install r.project
+
+	choco install r.studio		
+
+4 SublimeText3 text editor
+	
+	choco install sublimetext3
+
+5 Python - programming
+	
+	choco install python	
+
+
+6 Biopython 
+
+	pip install biopython
+
+	#pup is a python package manager
+
+7 Update the packages 
+	
+	choco upgrade <pkg|all>
+
+	https://github.com/chocolatey/choco/wiki/CommandsUpgrade	
+
+###############################################################################################################################################
+
+													YOU ARE READY TO CODE!!
+
+###############################################################################################################################################
