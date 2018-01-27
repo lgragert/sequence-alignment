@@ -81,9 +81,11 @@ Biopython offers a better deal as it runs the BLAST and gets the output, as well
 
 	4 move ARC_sequence.fasta, biopython_blast.py, blast_run.sh, blast_output_parser.py to ncbi-blast-2.7.1+/blastdb directory
 
-	5 bash blast_run.sh (Runs NCBI local blast of ARC protein sequence and Viral proteome to give blast output as out.txt)
+	5 cd blastdb/
 
-	6 python3 biopython_blast.py (Runs NCBI BLAST by bipython of ARC protein sequence and Viral proteome to give blast output as blast_output.xml)
+	6 bash blast_run.sh (Runs NCBI local blast of ARC protein sequence and Viral proteome to give blast output as out.txt)
 
-	7 python3 blast_output_parser.py (parses the XML file and gets the output in BLAST_results.csv)
+	7 python3 biopython_blast.py (Runs NCBI BLAST by bipython of ARC protein sequence and Viral proteome to give blast output as blast_output.xml)
+
+	8 python3 blast_output_parser.py (parses the XML file and gets the output in BLAST_results.csv)
 
