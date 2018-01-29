@@ -49,18 +49,18 @@ apt-cyg install curl
 choco install atom
 ```
 
-* Python Anaconda distribution
+* Python3
 
 ```
-choco install anaconda
+choco install python3
 ```
 
 * Biopython - Install if not already using Python Anaconda distribution
 
-Pip is the package manager for Python modules
+# Pip is the package manager for Python modules
 
 ```
-pip install biopython
+pip3 install biopython
 ```
 
 * PuTTY - SSH - Needed to connect to Cypress
