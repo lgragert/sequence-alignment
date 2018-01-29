@@ -1,72 +1,85 @@
 
-################################################################################################################################################
+#####################################################################################################
 
-													WINDOWS SOFTWARE INSTLLATION GUIDE
+WINDOWS SOFTWARE INSTLLATION GUIDE
 
-################################################################################################################################################
+#####################################################################################################
 
-1 Chocolatey package manager (https://chocolatey.org/)
-
+* Chocolatey package manager (https://chocolatey.org/) - Package managers allow users to install and update software from the command line
 
 Open an admin Powershell Window - right-click Run As Administrator -Powershell can be "Run As Administrator" by default by doing the following: 
-
-1) search Powershell from Windows Explorer (or Cortana if using Windows 10 and pin to taskbar) 
-
-2) after pinning to taskbar, right-click the Powershell icon on the taskbar 
-
-3) right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties" 
-
+1) Search Powershell from Windows Explorer (or Cortana if using Windows 10 and pin to taskbar) 
+2) After pinning to taskbar, right-click the Powershell icon on the taskbar 
+3) Right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties" 
 4) Under "Shortcut tab" left-click "Advanced..." button" 
+5) Make sure the box next to "Run As Administrator" is checked and then click "Apply"
 
-5) make sure the box next to "Run As Administrator" is checked and then click "Apply"
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco feature enable -n allowGlobalConfirmation
+```
 
+* Cygwin - Unix functionality
 
-Set-ExecutionPolicy UnRestricted
+```
+choco install cygwin
+```
 
-iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+* Curl - Unix Command line tool for transferring data
 
-. $profile
+Install lynx using Powershell:
 
+```
+cd C:\tools\cygwin\
+./cygwinsetup.exe -q -P wget,tar,qawk,bzip2,vim,lynx
+```
 
+Install apt-cyg and curl using Cygwin shell.
+apt-cyg is package manager for Cygwin
 
-2 Cygwin - Unix functionality
+```
+lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
+install apt-cyg /bin
+apt-cyg install curl
+```
 
-	choco install cygwin
+* Atom - Text Editor
 
+```
+choco install atom
+```
 
-3 PuTTY- SSH
+* Python Anaconda distribution
 
-	choco install putty 
+```
+choco install anaconda
+```
 
-3 R and rstudio
+* Biopython - Install if not already using Python Anaconda distribution
 
-	choco install r.project
+Pip is the package manager for Python modules
 
-	choco install r.studio		
+```
+pip install biopython
+```
 
-4 SublimeText3 text editor
-	
-	choco install sublimetext3
+* PuTTY - SSH - Needed to connect to Cypress
 
-5 Python - programming
-	
-	choco install python	
+```
+choco install putty 
+```
 
+* R and RStudio
 
-6 Biopython 
+```
+choco install r.project
+choco install r.studio		
+```
 
-	pip install biopython
+* Commands to update packages managed by Chocolatey
 
-	#pup is a python package manager
+```
+choco upgrade <pkg|all>
+```
 
-7 Update the packages 
-	
-	choco upgrade <pkg|all>
-
-	https://github.com/chocolatey/choco/wiki/CommandsUpgrade	
-
-###############################################################################################################################################
-
-													YOU ARE READY TO CODE!!
-
-###############################################################################################################################################
+https://github.com/chocolatey/choco/wiki/CommandsUpgrade	
