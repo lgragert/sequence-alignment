@@ -1,70 +1,61 @@
+#################################################################################################################
+MAC SOFTWARE INSTALLATION GUIDE
+#################################################################################################################
+
+* Homebrew: The missing package manager for macOS (https://docs.brew.sh/)
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+* Cask: extension of brew
+
+```
+brew tap caskroom/cask
+brew install brew-cask
+brew tap caskroom/versions
+```
+
+Example of installing through cask. To install google chrome in your system, simply type brew cask install google-chrome
 
 
-################################################################################################################################################
+* iTerm2 : added features to mac terminal
 
-													MAC SOFTWARE INSTLLATION GUIDE
+```
+brew cask install iterm2 
+```
 
-################################################################################################################################################
+* Atom Text Editor
 
+```
+brew install atom
+```
 
+* Python 3
 
-1 Homebrew: The missing package manager for macOS (https://docs.brew.sh/)
+```
+brew install python3
+```
 
-Open terminal and paste /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+* BioPython module install
 
-2 Cask: extension of brew
-	In the terminal type the following commands:
+```
+pip3 install biopython
+```
 
+# pip3 is a package manager for python modules
 
-	brew tap caskroom/cask
-	brew install brew-cask
-	brew tap caskroom/versions
+* R and RStudio IDE
 
+```
+brew cask install java
+brew tap homebrew/science
+brew install R
+brew install Caskroom/cask/rstudio		
+```
 
-	Example of installing through cask. To install google chrome in your system, simply type brew cask install google-chrome
+* Updating packages managed by brew
 
-
-
-
-3 iTerm2 : added features to mac terminal
-
-	brew cask install iterm2 
-
-
-4 R and rstudio
-
-	brew cask install java
-	brew tap homebrew/science
-	brew install R
-	brew install Caskroom/cask/rstudio		
-
-
-3 Sublime3 texteditor
-
-	brew install sublime-text3
-
-
-4 Python 
-
-	brew install python3
-
-
-5 Biopython 
-
-	pip3 install biopython
-
-#pip3 is a python python package manager
-
-
-
-6 Update the packages 
-
-	brew update && brew upgrade && brew cleanup && brew cask cleanup
-
-
-
-###############################################################################################################################################
-
-													YOU ARE READY TO CODE!!
-
-###############################################################################################################################################
+```
+brew update && brew upgrade && brew cleanup && brew cask cleanup
+```
