@@ -76,6 +76,13 @@ choco install r.project
 choco install r.studio		
 ```
 
+* PyCharm IDE for Python
+
+```
+choco install pycharm
+```
+
+
 * Commands to update packages managed by Chocolatey
 
 ```
