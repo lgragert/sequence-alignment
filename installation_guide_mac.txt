@@ -45,6 +45,13 @@ pip3 install biopython
 
 # pip3 is a package manager for python modules
 
+
+* PyCharm - IDE for Python (optional)
+
+```
+brew cask install pycharm-ce
+```
+
 * R and RStudio IDE
 
 ```
