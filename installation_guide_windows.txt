@@ -83,10 +83,11 @@ choco install pycharm
 ```
 
 
-* Commands to update packages managed by Chocolatey
+* Command to update all packages managed by Chocolatey
 
 ```
 choco upgrade all
 ```
 
-https://github.com/chocolatey/choco/wiki/CommandsUpgrade
+# Can also choose a specific package to update - See all commands here
+# https://github.com/chocolatey/choco/wiki/CommandsUpgrade
