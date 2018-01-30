@@ -1,0 +1,45 @@
+
+
+
+
+#################################################################################################################################################################
+
+Lecture 5: Multiple sequence alignment
+
+Instructor: Dr Loren Gragert, Assistant Professor, Department of Pathology and Laboratory Medicine, Tulane School of Medicine.
+
+###############################################################################################################################################################
+
+
+
+###############################################################################################################################################################
+
+INSTRUCTIONS FOR RUNNING CLUSTAL W WEB TOOL
+
+###############################################################################################################################################################
+
+
+
+	Open the CLUSTAL W homepage at http://www.genome.jp/tools-bin/clustalw
+
+	Copy and paste the fasta sequences from MSA_sequences_file.txt (provided) or upload the file
+
+	Output format can remain as default
+
+	For pairwise alignment select SLOW/ACCURATE
+
+	Execute Multiple Alignment
+
+	From the tree menu try executing with Neighbor-joining/UPGMA formats
+
+
+
+
+################################################################################################################################################################
+
+INSTRUCTIONS FOR MULTIPLE SEQUENCE ALIGNMENTS WITH BIOPYTHON
+
+###############################################################################################################################################################
+
+
+
