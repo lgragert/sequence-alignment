@@ -7,11 +7,11 @@ WINDOWS SOFTWARE INSTLLATION GUIDE
 
 * Chocolatey package manager (https://chocolatey.org/) - Package managers allow users to install and update software from the command line
 
-Open an admin Powershell Window - right-click Run As Administrator -Powershell can be "Run As Administrator" by default by doing the following: 
-1) Search Powershell from Windows Explorer (or Cortana if using Windows 10 and pin to taskbar) 
-2) After pinning to taskbar, right-click the Powershell icon on the taskbar 
-3) Right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties" 
-4) Under "Shortcut tab" left-click "Advanced..." button" 
+Open an admin Powershell Window - right-click Run As Administrator -Powershell can be "Run As Administrator" by default by doing the following:
+1) Search Powershell from Windows Explorer (or Cortana if using Windows 10 and pin to taskbar)
+2) After pinning to taskbar, right-click the Powershell icon on the taskbar
+3) Right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties"
+4) Under "Shortcut tab" left-click "Advanced..." button"
 5) Make sure the box next to "Run As Administrator" is checked and then click "Apply"
 
 ```
@@ -66,14 +66,14 @@ pip3 install biopython
 * PuTTY - SSH - Needed to connect to Cypress
 
 ```
-choco install putty 
+choco install putty
 ```
 
 * R and RStudio
 
 ```
 choco install r.project
-choco install r.studio		
+choco install r.studio
 ```
 
 * PyCharm IDE for Python
@@ -86,7 +86,7 @@ choco install pycharm
 * Commands to update packages managed by Chocolatey
 
 ```
-choco upgrade <pkg|all>
+choco upgrade all
 ```
 
-https://github.com/chocolatey/choco/wiki/CommandsUpgrade	
+https://github.com/chocolatey/choco/wiki/CommandsUpgrade
