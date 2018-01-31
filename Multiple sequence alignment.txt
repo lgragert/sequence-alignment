@@ -22,7 +22,7 @@ INSTRUCTIONS FOR RUNNING CLUSTAL W WEB TOOL
 
 	Open the CLUSTAL W homepage at http://www.genome.jp/tools-bin/clustalw
 
-	Copy and paste the fasta sequences from MSA_sequences_file.txt (provided) or upload the file
+	Copy and paste the fasta sequences from MSA_sequences_file.fasta (provided) or upload the file
 
 	Output format can remain as default
 
@@ -41,5 +41,57 @@ INSTRUCTIONS FOR MULTIPLE SEQUENCE ALIGNMENTS WITH BIOPYTHON
 
 ###############################################################################################################################################################
 
+Download CLUSTAL W and MUSCLE on your system
+
+###############################################################################################################################################################
+
+CLUSTALW
+
+From Unix terminal change directory to the current directory where you have all the files
+
+For MAC OSX curl -O http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg
+
+For windows curl -O http://www.clustal.org/download/current/clustalw-2.1-win.msi
 
 
+Go to the directory, double click on the dmg or msi and pull out out the executable clustalw2 
+
+Copy the executable to the current directory
+
+
+
+MUSCLE
+
+
+For MAC OSX curl -OL https://www.drive5.com/muscle/downloads.htm/muscle3.8.31_i86darwin32.tar.gz
+tar xvf muscle3.8.31_i86darwin64.tar.gz
+chmod +x muscle3.8.31_i86darwin64
+mv muscle3.8.31_i86darwin64 muscle
+
+
+
+For windows curl -OL https://www.drive5.com/muscle/downloads.htm/muscle3.8.31_i86win32.exe
+***************************************************
+chmod +x muscle3.8.31_i86win32.exe
+mv muscle3.8.31_i86win32.exe muscle.exe
+
+
+
+#############################################################################################################################################################
+
+Running CLUSTAL W and MUSCLE with BIOPYTHON
+
+#############################################################################################################################################################
+
+
+To run CLUSTAL W and MUSCLE using biopython, open the python scripts biopython_clustalw.py, bipython_muscle.py and change the absolute paths to 
+the executables in your directory
+
+Save the changes
+
+From the unix shell
+
+execute the commands 
+
+python3 biopython_clustalw.py
+python3 biopython_muscle.py
