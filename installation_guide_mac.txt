@@ -28,7 +28,7 @@ brew cask install iterm2
 * Atom Text Editor
 
 ```
-brew install atom
+brew cask install atom
 ```
 
 * Python 3
