@@ -20,17 +20,12 @@ INSTRUCTIONS FOR RUNNING CLUSTAL W WEB TOOL
 
 
 
-	Open the CLUSTAL W homepage at http://www.genome.jp/tools-bin/clustalw
-
-	Copy and paste the fasta sequences from MSA_sequences_file.fasta (provided) or upload the file
-
-	Output format can remain as default
-
-	For pairwise alignment select SLOW/ACCURATE
-
-	Execute Multiple Alignment
-
-	From the tree menu try executing with Neighbor-joining/UPGMA formats
+	1) Open the CLUSTAL W homepage at http://www.genome.jp/tools-bin/clustalw
+	2) Copy and paste the fasta sequences from MSA_sequences_file.fasta (provided) or upload the file
+	3) Output format can remain as default
+	4) For pairwise alignment select SLOW/ACCURATE
+	5) Execute Multiple Alignment
+	6) From the tree menu try executing with Neighbor-joining/UPGMA formats
 
 
 
@@ -45,36 +40,74 @@ Download CLUSTAL W and MUSCLE on your system
 
 ###############################################################################################################################################################
 
-CLUSTALW
+* CLUSTALW
 
-From Unix terminal change directory to the current directory where you have all the files
+* From Unix terminal change directory to the current directory where you have all the files
 
-For MAC OSX curl -O http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg
-
-For windows curl -O http://www.clustal.org/download/current/clustalw-2.1-win.msi
+*For MAC OSX 
 
 
-Go to the directory, double click on the dmg or msi and pull out out the executable clustalw2 
+```
+curl -O http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg
+```
 
-Copy the executable to the current directory
+*For windows 
+
+```
+curl -O http://www.clustal.org/download/current/clustalw-2.1-win.msi
+```
+
+*Go to the directory, double click on the dmg or msi and pull out out the executable clustalw2 
+
+*Copy the executable to /usr/local/bin for MAC and C:\cygwin\usr\local\bin for windows
+
+```
+cp clustalw2 /usr/local/bin
+```
+
+```
+cp clustalw2 C:\cygwin\usr\local\bin
+```
+
+* MUSCLE
 
 
+* For MAC OSX 
 
-MUSCLE
+```
+curl -OL https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86darwin64.tar.gz
+```
 
-
-For MAC OSX curl -OL https://www.drive5.com/muscle/downloads.htm/muscle3.8.31_i86darwin32.tar.gz
+```
 tar xvf muscle3.8.31_i86darwin64.tar.gz
+```
+
+```
 chmod +x muscle3.8.31_i86darwin64
-mv muscle3.8.31_i86darwin64 muscle
+```
+
+```mv muscle3.8.31_i86darwin64 muscle
+```
+
+```cp muscle /usr/local/bin
+```
 
 
 
-For windows curl -OL https://www.drive5.com/muscle/downloads.htm/muscle3.8.31_i86win32.exe
-***************************************************
-chmod +x muscle3.8.31_i86win32.exe
-mv muscle3.8.31_i86win32.exe muscle.exe
+*For windows 
 
+```
+curl -OL https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86win32.exe
+```
+
+```chmod +x muscle3.8.31_i86win32.exe
+```
+
+```mv muscle3.8.31_i86win32.exe muscle.exe
+```
+
+```cp muscle C:\cygwin\usr\local\bin
+```
 
 
 #############################################################################################################################################################
@@ -84,14 +117,11 @@ Running CLUSTAL W and MUSCLE with BIOPYTHON
 #############################################################################################################################################################
 
 
-To run CLUSTAL W and MUSCLE using biopython, open the python scripts biopython_clustalw.py, bipython_muscle.py and change the absolute paths to 
-the executables in your directory
+*To run CLUSTAL W and MUSCLE using biopython, run the commands from unix shell
 
-Save the changes
+```python3 biopython_clustalw.py
+```
 
-From the unix shell
 
-execute the commands 
-
-python3 biopython_clustalw.py
-python3 biopython_muscle.py
+```python3 biopython_muscle.py
+```
