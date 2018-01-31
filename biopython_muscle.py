@@ -3,7 +3,7 @@ import Bio
 
 from Bio.Align.Applications import MuscleCommandline
 
-mus = "/Users/navchetankaur/Documents/bioinfo_course/sequence-alignment/muscle"
+mus = "muscle"
 
 in_file = "MSA_sequences_file.fasta"
 
