@@ -1,7 +1,7 @@
 
 #####################################################################################################
 
-WINDOWS SOFTWARE INSTLLATION GUIDE
+WINDOWS SOFTWARE INSTALLATION GUIDE
 
 #####################################################################################################
 
@@ -12,14 +12,17 @@ Open an admin Powershell Window - right-click Run As Administrator -Powershell c
 2) After pinning to taskbar, right-click the Powershell icon on the taskbar
 3) Right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties"
 4) Under "Shortcut tab" left-click "Advanced..." button"
-5) Make sure the box next to "Run As Administrator" is checked and then click "Apply"
+# 5) Make sure the box next to "Run As Administrator" is checked and then click "Apply"
+
+Copy commands inside backticks and paste in Powershell (and later Cygwin terminal)
+Use WordPad to open this text file to start - until you have Atom installed.
 
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n allowGlobalConfirmation
 ```
 
-* Cygwin - Unix functionality
+* Cygwin - Unix Terminal / Bash Shell Functionality
 
 ```
 choco install cygwin
@@ -34,9 +37,8 @@ cd C:\tools\cygwin\
 ./cygwinsetup.exe -q -P wget,tar,qawk,bzip2,vim,lynx
 ```
 
-Install apt-cyg and curl using Cygwin shell.
-apt-cyg is package manager for Cygwin
-
+Install apt-cyg and curl using Cygwin Terminal (apt-cyg is package manager for Cygwin)
+Use Cygwin terminal from here on - Powershell is for Windows, Cygwin is for Unix.
 ```
 lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 install apt-cyg /bin
@@ -82,8 +84,24 @@ choco install r.studio
 choco install pycharm
 ```
 
+* Download all scripts and files from Canvas to working directory
+
+On your Windows filesystem, you should have a C:\tools\cygwin\home\<username> folder.
+In Cygwin, the same directory is /home/<username>/.
+This home directory is good place to put all your files.
+You can create a /dev/sequence-alignment subdirectory in your home.
+
+From Cygwin, you can access other directories on your hard cygdrive.
+The /cygdrive/c/ folder on Cygwin is the same as C:\ in Windows filesystem.
+
+Also set Atom to be the default editor for .txt,.sh, and .py files in Windows.
+Right-click on file in Explorer to select which program to use to open a file.
+You can also type "atom <filename>" in Cygwin to open a file.
 
 * Command to update all packages managed by Chocolatey
+
+Run every few weeks or so to keep software up to date.
+Won't do anything until updated packages are available.
 
 ```
 choco upgrade all
