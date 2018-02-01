@@ -33,3 +33,8 @@ gunzip *.gz
 # Creates BLAST database from viral protein FASTA file
 # Should make .phr, .pin, and .psq files if successful
 makeblastdb -in viral.1.protein.faa -dbtype prot
+
+# Make aliases for Python3 for Python /usr/bin/env python3 header to work
+cp /cygdrive/c/python36/python.exe /cygdrive/c/python36/python3.exe
+cp /cygdrive/c/python36/python.exe /usr/bin/
+cp /cygdrive/c/python36/python3.exe /usr/bin/
