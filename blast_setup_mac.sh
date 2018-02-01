@@ -7,6 +7,7 @@ cd ncbi-blast-2.7.1+
 
 cd bin
 mkdir /usr/local/ncbi/blast/bin/
+chmod 777 /usr/local/ncbi/blast/bin/*
 cp * /usr/local/ncbi/blast/bin/
 echo 'export PATH="/usr/local/ncbi/blast/bin:$PATH"' >> ~./bash_profile
 cd ..
