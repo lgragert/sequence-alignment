@@ -20,7 +20,7 @@ chmod 777 /usr/local/ncbi/blast/bin/* # make give error if no file there already
 cp * /usr/local/ncbi/blast/bin/
 PATH=/usr/local/ncbi/blast/bin:$PATH # add path for session
 echo 'export PATH="/usr/local/ncbi/blast/bin:$PATH"' >> ~/.bash_profile
-cd ..
+cd ../.. # go back to working directory
 
 # Make a directory to store the BLAST database
 mkdir blastdb
