@@ -16,8 +16,7 @@ cd ncbi-blast-2.7.1+
 # copies BLAST binaries to /usr/local/ and add directory to PATH
 cd bin
 mkdir -p /usr/local/ncbi/blast/bin/
-chmod 777 /usr/local/ncbi/blast/bin/* # make give error if no file there already
-cp * /usr/local/ncbi/blast/bin/
+cp * /usr/local/ncbi/blast/bin/ # may give error if files there already - ignore
 PATH=/usr/local/ncbi/blast/bin:$PATH # add path for session
 echo 'export PATH="/usr/local/ncbi/blast/bin:$PATH"' >> ~/.bash_profile
 cd ../.. # go back to working directory
