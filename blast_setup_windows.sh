@@ -6,6 +6,13 @@
 # Can also run this by setting as an executable with the command
 # "chmod +x blast_setup_windows.sh" followed by "./blast_setup_windows.sh"
 
+
+
+# Install apt-cyg and curl using Cygwin Terminal (apt-cyg is package manager for Cygwin)
+lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
+install apt-cyg /bin
+apt-cyg install curl
+
 # Downloads BLAST Windows install - compressed using tar and gzip
 curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.7.1+-x64-win64.tar.gz
 
@@ -35,6 +42,11 @@ gunzip *.gz
 makeblastdb -in viral.1.protein.faa -dbtype prot
 
 # Make aliases for Python3 for Python /usr/bin/env python3 header to work
+PATH=/cygdrive/c/python36:$PATH # add path for session
+echo 'export PATH="/cygdrive/c/python36:$PATH"' >> ~/.bash_profile
 cp /cygdrive/c/python36/python.exe /cygdrive/c/python36/python3.exe
-cp /cygdrive/c/python36/python.exe /usr/bin/
-cp /cygdrive/c/python36/python3.exe /usr/bin/
+
+# install BioPython module using pip3
+# Pip is the package manager for Python modules
+# Conda is the package manager for Anaconda - Already have biopython with Anaconda
+pip3 install biopython

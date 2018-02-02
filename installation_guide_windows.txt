@@ -37,17 +37,6 @@ cd C:\tools\cygwin\
 ./cygwinsetup.exe -q -P wget,tar,qawk,bzip2,vim,lynx
 ```
 
-
-
-Install apt-cyg and curl using Cygwin Terminal (apt-cyg is package manager for Cygwin)
-Use Cygwin terminal from here on - Powershell is for Windows, Cygwin is for Unix.
-
-```
-lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
-install apt-cyg /bin
-apt-cyg install curl
-```
-
 # * If the Lynx install fails due to McAfee antivirus, here's how to install curl manually
 # No need to do this if above commands worked
 # 1) Find the cygwin setup.exe file from http://cygwin.com/ and run it.
@@ -60,6 +49,8 @@ apt-cyg install curl
 
 * Atom - Text Editor
 
+Make sure to Run Cygwin Terminal as Administrator
+
 ```
 choco install atom
 ```
@@ -68,14 +59,6 @@ choco install atom
 
 ```
 choco install python
-```
-
-* Biopython - Install if not already using Python Anaconda distribution
-
-# Pip is the package manager for Python modules
-
-```
-pip3 install biopython
 ```
 
 * PuTTY - SSH - Needed to connect to Cypress
