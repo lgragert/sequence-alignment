@@ -1,11 +1,11 @@
-#! bin/bash
+#!/usr/bin/env python3
 
 import os
 import Bio
 from Bio.Blast import NCBIXML
 
 
-out_filename = "BLAST_results.csv" 
+out_filename = "BLAST_results.csv"
 out_file = open(out_filename, "w")
 out_file.write("Viral_protein" + "," + "E-value" + "," + "Length" + "," + "Raw_score" + "," + "Bit_score" + "," + "hsp_query" + "," + "hsp_match" + ","
 	+ "hsp_sbjct" + "," + "Gaps" + "\n")
@@ -21,8 +21,8 @@ blast_record = next(blast_records)
 for alignment in blast_record.alignments:
 	for hsp in alignment.hsps:
 		title_split = alignment.title.split(" ")
-		
-		
+
+
 		viral_protein = title_split[2:]
 		viral_protein = " ".join(viral_protein)
 		e_value = hsp.expect
@@ -41,4 +41,4 @@ for alignment in blast_record.alignments:
 
 
 
-out_file.close()		
+out_file.close()
