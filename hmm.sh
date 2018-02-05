@@ -21,4 +21,4 @@ hmmalign MSA.hmm human_herpes_virus_proteins.fasta >hmm_align.out
 
 
 ### HMMSCAN HMM database for a sequence
-hmmscan minifam ARC_protein_sequence.fasta
+hmmscan minifam ARC_protein_sequence.fasta >hmmscan.hmmer3-text
