@@ -62,4 +62,10 @@ bash hmm.sh
 
 ```
 
+*Parses the HMMSCAN output
 
+
+````
+python3 hmm_scan_parser.py
+
+```
