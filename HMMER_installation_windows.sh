@@ -6,7 +6,7 @@
 curl -OL http://eddylab.org/software/hmmer3/3.1b2/hmmer-3.1b2-cygwin64.tar.gz
 
 # Install GCC compiler and make
-apt-cyg install gcc
+apt-cyg install gcc-core
 apt-cyg install make
 
 #unpack
