@@ -47,6 +47,16 @@ INSTALL HMMER IN YOUR SYSTEM USING HMMER_installation_mac.sh for MACOSX and HMME
 
 *Create profile hidden markov models and align new sequence to models
 
+
+```
+python3 biopython_clustalw.py
+```
+
+```
+python3 biopython_clustalw_hiv.py
+
+```
+
 ```
 bash hmm.sh
 
