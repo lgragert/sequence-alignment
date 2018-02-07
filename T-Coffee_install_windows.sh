@@ -1,11 +1,23 @@
 # Install Script for T-Coffee for Windows
 
-# Install fort77 compiler
+# Install Cygwin compilers and devel tools
 apt-cyg install fort77
+apt-cyg install libcrypt-devel
+apt-cyg install gcc-g++
+apt-cyg install openssl-devel
+apt-cyg install libexpat-devel
+apt-cyg install httpd-devel
 
-# Install XML::Simple and SOAP::Lite CPAN Modules for Perl (this will take a while)
+# Install XML::Simple and SOAP::Lite CPAN Modules for Perl (this takes a while)
+# Force installs currently required for several of these modules
+cpan -fi Module::Build
+cpan -fi XML::SemanticDiff
+cpan -fi SOAP::Transport::TCP
+cpan -fi XMLRPC::Lite
+cpan -fi XML::Parser::Lite
 cpan install XML::Simple
 cpan install SOAP::Lite
+cpan -fi SOAP::Lite
 
 # Download T-Coffee Source Distribution using curl
 curl -OL http://www.tcoffee.org/Packages/Stable/Latest/T-COFFEE_distribution_Version_11.00.8cbe486.tar.gz
