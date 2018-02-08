@@ -10,6 +10,7 @@ apt-cyg install httpd-devel
 
 # Install XML::Simple and SOAP::Lite CPAN Modules for Perl (this takes a while)
 # Force installs currently required for several of these modules
+cpan install mod_perl2
 cpan -fi Module::Build
 cpan -fi XML::SemanticDiff
 cpan -fi SOAP::Transport::TCP
