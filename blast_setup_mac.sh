@@ -7,11 +7,12 @@
 # "chmod +x blast_setup_mac.sh" followed by "./blast_setup_mac.sh"
 
 # Downloads BLAST Mac install - compressed using tar and gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.7.1+-x64-macosx.tar.gz
+curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.8.1+-x64-macosx.tar.gz
 
 # Uncompresses BLAST distribution
-tar xzf ncbi-*.tar.gz
-cd ncbi-blast-2.7.1+
+tar xzf ncbi-blast-2.8.1+-x64-macosx.tar.gz
+#tar xzf ncbi-*.tar.gz
+cd ncbi-blast-2.8.1+
 
 # copies BLAST binaries to /usr/local/ and add directory to PATH
 cd bin
