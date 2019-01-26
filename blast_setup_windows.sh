@@ -14,11 +14,11 @@ install apt-cyg /bin
 apt-cyg install curl
 
 # Downloads BLAST Windows install - compressed using tar and gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.7.1+-x64-win64.tar.gz
+curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.8.1+-x64-win64.tar.gz
 
 # Uncompresses BLAST distribution
 tar xzf ncbi-*.tar.gz
-cd ncbi-blast-2.7.1+
+cd ncbi-blast-2.8.1+
 
 # copies BLAST binaries to /usr/local/ and add directory to PATH
 cd bin
