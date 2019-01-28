@@ -1,36 +1,34 @@
 
 #####################################################################################################
-
-WINDOWS SOFTWARE INSTALLATION GUIDE
-
+# WINDOWS SOFTWARE INSTALLATION GUIDE
 #####################################################################################################
 
-* Chocolatey package manager (https://chocolatey.org/) - Package managers allow users to install and update software from the command line
+# Chocolatey package manager (https://chocolatey.org/) - Package managers allow users to install and update software from the command line
 
-Open an admin Powershell Window - right-click Run As Administrator -Powershell can be "Run As Administrator" by default by doing the following:
-1) Search Powershell from Windows Explorer (or Cortana if using Windows 10 and pin to taskbar)
-2) After pinning to taskbar, right-click the Powershell icon on the taskbar
-3) Right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties"
-4) Under "Shortcut tab" left-click "Advanced..." button"
+# Open an admin Powershell Window - right-click Run As Administrator -Powershell can be "Run As Administrator" by default by doing the following:
+# 1) Search Powershell from Windows Explorer (or Cortana if using Windows 10 and pin to taskbar)
+# 2) After pinning to taskbar, right-click the Powershell icon on the taskbar
+# 3) Right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties"
+# 4) Under "Shortcut tab" left-click "Advanced..." button"
 # 5) Make sure the box next to "Run As Administrator" is checked and then click "Apply"
 
-Copy commands inside backticks and paste in Powershell (and later Cygwin terminal)
-Use WordPad to open this text file to start - until you have Atom installed.
+# Copy commands inside backticks and paste in Powershell (and later Cygwin terminal)
+# Use WordPad to open this text file to start - until you have Atom installed.
 
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n allowGlobalConfirmation
 ```
 
-* Cygwin - Unix Terminal / Bash Shell Functionality
+# Cygwin - Unix Terminal / Bash Shell Functionality
 
 ```
 choco install cygwin
 ```
 
-* Curl - Unix Command line tool for transferring data
+# Curl - Unix Command line tool for transferring data
 
-Install lynx using Powershell:
+# Install lynx using Powershell:
 
 ```
 cd C:\tools\cygwin\
@@ -47,57 +45,57 @@ cd C:\tools\cygwin\
 # 6) Open a cygwin window and type curl.exe (should be available now).
 
 
-* Atom - Text Editor
+# Atom - Text Editor
 
-Make sure to Run Cygwin Terminal as Administrator
+# Make sure to Run Cygwin Terminal as Administrator
 
 ```
 choco install atom
 ```
 
-* Python3
+# Python3
 
 ```
 choco install python
 ```
 
-* PuTTY - SSH - Needed to connect to Cypress
+# PuTTY - SSH - Needed to connect to Cypress
 
 ```
 choco install putty
 ```
 
-* R and RStudio
+# R and RStudio
 
 ```
 choco install r.project
 choco install r.studio
 ```
 
-* PyCharm IDE for Python
+# PyCharm IDE for Python
 
 ```
 choco install pycharm
 ```
 
-* Download all scripts and files from Canvas to working directory
+# Download all scripts and files from Canvas to working directory
 
-On your Windows filesystem, you should have a C:\tools\cygwin\home\<username> folder.
-In Cygwin, the same directory is /home/<username>/.
-This home directory is good place to put all your files.
-You can create a /dev/sequence-alignment subdirectory in your home.
+# On your Windows filesystem, you should have a C:\tools\cygwin\home\<username> folder.
+# In Cygwin, the same directory is /home/<username>/.
+# This home directory is good place to put all your files.
+# You can create a /dev/sequence-alignment subdirectory in your home.
 
-From Cygwin, you can access other directories on your hard cygdrive.
-The /cygdrive/c/ folder on Cygwin is the same as C:\ in Windows filesystem.
+# From Cygwin, you can access other directories on your hard cygdrive.
+# The /cygdrive/c/ folder on Cygwin is the same as C:\ in Windows filesystem.
 
-Also set Atom to be the default editor for .txt,.sh, and .py files in Windows.
-Right-click on file in Explorer to select which program to use to open a file.
-You can also type "atom <filename>" in Cygwin to open a file.
+# Also set Atom to be the default editor for .txt,.sh, and .py files in Windows.
+# Right-click on file in Explorer to select which program to use to open a file.
+# You can also type "atom <filename>" in Cygwin to open a file.
 
-* Command to update all packages managed by Chocolatey
+# Command to update all packages managed by Chocolatey
 
-Run every few weeks or so to keep software up to date.
-Won't do anything until updated packages are available.
+# Run every few weeks or so to keep software up to date.
+# Won't do anything until updated packages are available.
 
 ```
 choco upgrade all

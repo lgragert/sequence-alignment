@@ -1,43 +1,44 @@
 #################################################################################################################
-MAC SOFTWARE INSTALLATION GUIDE
+# MAC SOFTWARE INSTALLATION GUIDE
 #################################################################################################################
 
-* Homebrew: The missing package manager for macOS (https://docs.brew.sh/)
+# Copy and paste commands between ``` in terminal
+
+# Homebrew: The missing package manager for macOS (https://docs.brew.sh/)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-* Cask: extension of brew
+# Cask: extension of brew
 
 ```
 brew tap caskroom/cask
-brew install brew-cask
 brew tap caskroom/versions
 ```
 
-Example of installing through cask. To install google chrome in your system, simply type brew cask install google-chrome
+# Example of installing through cask. To install google chrome in your system, simply type brew cask install google-chrome
 
 
-* iTerm2 : added features to mac terminal
+# iTerm2 : added features to mac terminal
 
 ```
 brew cask install iterm2 
 ```
 
-* Atom Text Editor
+# Atom Text Editor
 
 ```
 brew cask install atom
 ```
 
-* Python 3
+# Python 3
 
 ```
 brew install python3
 ```
 
-* BioPython module install
+# BioPython module install
 
 ```
 pip3 install biopython
@@ -46,23 +47,23 @@ pip3 install biopython
 # pip3 is a package manager for python modules
 
 
-* PyCharm - IDE for Python (optional)
+# PyCharm - IDE for Python (optional)
 
 ```
 brew cask install pycharm-ce
 ```
 
-* R and RStudio IDE
+# R and RStudio IDE
 
 ```
 brew cask install java
-brew tap homebrew/science
+brew tap brewsci/bio
 brew install R
 brew install Caskroom/cask/rstudio		
 ```
 
-* Updating packages managed by brew
+# Updating packages managed by brew
 
 ```
-brew update && brew upgrade && brew cleanup && brew cask cleanup
+brew update && brew upgrade && brew cleanup
 ```
