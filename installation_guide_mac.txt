@@ -10,6 +10,13 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+# Use Brewfile to install everything below
+
+```
+brew bundle
+```
+
+
 # Cask: extension of brew
 
 ```
