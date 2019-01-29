@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Make sure you've downloaded all scripts from Canvas to a working directory
 # before running this script.
