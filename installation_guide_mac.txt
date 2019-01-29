@@ -12,10 +12,17 @@
 
 # Use Brewfile to install everything below
 
+# Safari automatically adds '.txt' extension to Brewfile.
+# Either remove the .txt or download everything from Canvas with Google Chrome
+# https://discussions.apple.com/thread/199100
+
+# If 'brew bundle' works this will be the last command you need to run
+
 ```
 brew bundle
 ```
 
+# Below here are instructions to install individual programs manually
 
 # Cask: extension of brew
 
@@ -24,13 +31,14 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 ```
 
-# Example of installing through cask. To install google chrome in your system, simply type brew cask install google-chrome
+# Example of installing through cask. To install google chrome in your system, simply type
+# brew cask install google-chrome
 
 
 # iTerm2 : added features to mac terminal
 
 ```
-brew cask install iterm2 
+brew cask install iterm2
 ```
 
 # Atom Text Editor
@@ -66,7 +74,7 @@ brew cask install pycharm-ce
 brew cask install java
 brew tap brewsci/bio
 brew install R
-brew install Caskroom/cask/rstudio		
+brew install Caskroom/cask/rstudio
 ```
 
 # Updating packages managed by brew
