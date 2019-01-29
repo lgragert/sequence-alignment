@@ -6,6 +6,8 @@
 # Can also run this by setting as an executable with the command
 # "chmod +x blast_setup_mac.sh" followed by "./blast_setup_mac.sh"
 
+# Permission denied error? - run script with "sudo bash blast_setup_mac.sh"
+
 # Downloads BLAST Mac install - compressed using tar and gzip
 curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.8.1+-x64-macosx.tar.gz
 
@@ -20,6 +22,7 @@ mkdir -p /usr/local/ncbi/blast/bin/
 cp * /usr/local/ncbi/blast/bin/ # may give error if files there already - ignore
 PATH=/usr/local/ncbi/blast/bin:$PATH # add path for session
 echo 'export PATH="/usr/local/ncbi/blast/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 cd ../.. # go back to working directory
 
 # Make a directory to store the BLAST database
