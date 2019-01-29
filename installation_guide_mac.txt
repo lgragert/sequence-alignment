@@ -16,13 +16,18 @@
 # Either remove the .txt or download everything from Canvas with Google Chrome
 # https://discussions.apple.com/thread/199100
 
-# If 'brew bundle' works this will be the last command you need to run
-
 ```
 brew bundle
 ```
 
-# Below here are instructions to install individual programs manually
+# BioPython module install
+
+```
+pip3 install biopython
+```
+
+# If 'brew bundle' works this will be the last command you need to run
+# Below here are instructions to install individual programs manually with brew
 
 # Cask: extension of brew
 
@@ -51,12 +56,6 @@ brew cask install atom
 
 ```
 brew install python3
-```
-
-# BioPython module install
-
-```
-pip3 install biopython
 ```
 
 # pip3 is a package manager for python modules
