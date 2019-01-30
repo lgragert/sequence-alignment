@@ -1,20 +1,17 @@
-#!bin/bash
+#!/bin/bash
 
+# Make sure you are in your working directory 
 
-# Make sure you are in working directory 
+# Download HMMER
 
-
-#Downloads HMMER
 curl -OL http://eddylab.org/software/hmmer3/3.1b2/hmmer-3.1b2-macosx-intel.tar.gz
 
-#unpack 
+# unpack 
 tar xvf hmmer-3.1b2-macosx-intel.tar.gz
-
 cd hmmer-3.1b2-macosx-intel
 
 # Compile the software with configure and make
 ./configure
-
 make
 
 ### runs a test suite
