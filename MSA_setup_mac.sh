@@ -43,15 +43,6 @@ mv muscle3.8.31_i86darwin64 muscle
 cp muscle /usr/local/bin
 
 #############################################################################################################################################################
-# Running CLUSTAL W and MUSCLE with BIOPYTHON
-#############################################################################################################################################################
-
-# To run CLUSTAL W and MUSCLE using biopython, run the commands from unix shell
-
-python3 biopython_clustalw.py
-python3 biopython_muscle.py
-
-#############################################################################################################################################################
 # T-Coffee installation on Mac OSX
 #############################################################################################################################################################
 
@@ -89,3 +80,15 @@ source ~/.bash_profile
 # go back to working directory and check version
 cd ..
 t_coffee -version
+
+
+#############################################################################################################################################################
+# Running CLUSTAL W and MUSCLE and T-COFFEE with BIOPYTHON
+#############################################################################################################################################################
+
+# To run CLUSTAL W and MUSCLE using biopython, run the commands from unix shell
+
+python3 biopython_clustalw.py
+python3 biopython_muscle.py
+python3 biopython_tcoffee.py
+
