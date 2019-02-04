@@ -73,8 +73,8 @@ cd T-COFFEE_distribution_Version_12.00.451ed9b
 
 # add t_coffee to path and Bash config file
 
-export PATH=/Users/lgragert/.t_coffee/plugins/macosx:$PATH
-echo 'export PATH="/usr/local/ncbi/blast/bin:$PATH"' >> ~/.bash_profile
+export PATH=~/.t_coffee/plugins/macosx:$PATH
+echo 'export PATH="~/.t_coffee/plugins/macosx:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
 # go back to working directory and check version
