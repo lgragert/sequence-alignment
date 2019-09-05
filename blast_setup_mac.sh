@@ -9,18 +9,18 @@
 # Permission denied error? - run script with "sudo bash blast_setup_mac.sh"
 
 # Downloads BLAST Mac install - compressed using tar and gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.8.1+-x64-macosx.tar.gz
+curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.9.0+-x64-macosx.tar.gz
 
 # Uncompresses BLAST distribution
-tar xzf ncbi-blast-2.8.1+-x64-macosx.tar.gz
+tar xzf ncbi-blast-2.9.0+-x64-macosx.tar.gz
 #tar xzf ncbi-*.tar.gz
-cd ncbi-blast-2.8.1+
+cd ncbi-blast-2.9.0+
 
 # copies BLAST binaries to /usr/local/ and add directory to PATH
 cd bin
 mkdir -p /usr/local/ncbi/blast/bin/
 cp * /usr/local/ncbi/blast/bin/ # may give error if files there already - ignore
-PATH=/usr/local/ncbi/blast/bin:$PATH # add path for session
+export PATH=/usr/local/ncbi/blast/bin:$PATH # add path for session
 echo 'export PATH="/usr/local/ncbi/blast/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 cd ../.. # go back to working directory

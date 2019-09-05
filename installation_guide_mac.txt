@@ -1,8 +1,14 @@
 #################################################################################################################
-# MAC SOFTWARE INSTALLATION GUIDE
+# MAC OSX SOFTWARE INSTALLATION GUIDE
 #################################################################################################################
 
-# Copy and paste commands between ``` in terminal
+# Copy and paste commands between backticks ``` in OSX Terminal
+
+# Make sure Xcode command line tools are installed
+
+```
+xcode-select --install
+```
 
 # Homebrew: The missing package manager for macOS (https://docs.brew.sh/)
 
@@ -10,56 +16,47 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-# Use Brewfile to install everything below
-
-# Safari automatically adds '.txt' extension to Brewfile.
-# Either remove the .txt or download everything from Canvas with Google Chrome
-# https://discussions.apple.com/thread/199100
-
-```
-brew bundle
-```
-
-# BioPython module install
-
-```
-pip3 install biopython
-```
-
-# If 'brew bundle' works this will be the last command you need to run
-# Below here are instructions to install individual programs manually with brew
-
 # Cask: extension of brew
 
 ```
 brew tap caskroom/cask
-brew tap caskroom/versions
+brew tap homebrew/cask-versions
 ```
 
 # Example of installing through cask. To install google chrome in your system, simply type
 # brew cask install google-chrome
 
 
-# iTerm2 : added features to mac terminal
+# iTerm2 - added features to replace Mac terminal - Can still use Terminal if you like
 
 ```
 brew cask install iterm2
 ```
 
-# Atom Text Editor
+# Visual Studio Code Text Editor
 
 ```
-brew cask install atom
+brew cask install visual-studio-code
 ```
 
-# Python 3
+# Python 3 - Anaconda distribution that includes SciPy and NumPy modules
 
 ```
-brew install python3
+brew cask install python3
 ```
 
-# pip3 is a package manager for python modules
+# BioPython module install - Conda is the package manager for Python modules
 
+```
+pip3 install biopython
+pip3 install scipy
+```
+
+# Jupyter Notebook to run Python code interactively
+
+```
+pip3 install jupyterlab
+```
 
 # PyCharm - IDE for Python (optional)
 
@@ -73,11 +70,11 @@ brew cask install pycharm-ce
 brew cask install java
 brew tap brewsci/bio
 brew install R
-brew install Caskroom/cask/rstudio
+brew cask install rstudio
 ```
 
-# Updating packages managed by brew
+# Updating packages managed by HomeBrew - Run every few weeks
 
 ```
-brew update && brew upgrade && brew cleanup
+brew update && brew upgrade && brew cleanup && brew cask cleanup
 ```
