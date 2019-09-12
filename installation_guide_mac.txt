@@ -39,10 +39,11 @@ brew cask install iterm2
 brew cask install visual-studio-code
 ```
 
-# Python 3 - Anaconda distribution that includes SciPy and NumPy modules
+# Python 3
+# Should install this base distribution instead of Anaconda
 
 ```
-brew cask install python3
+brew install python3
 ```
 
 # BioPython module install - Conda is the package manager for Python modules
