@@ -1,77 +1,62 @@
-#################################################################################################################################################################
+###############################################################################
+# Multiple Sequence Alignment - In-Class Lab - Windows Install Guide
 
-Lecture 5: Multiple sequence alignment
+# Instructor: Dr Loren Gragert
+# Assistant Professor
+# Department of Pathology and Laboratory Medicine
+# Tulane School of Medicine.
+###############################################################################
 
-Instructor: Dr Loren Gragert, Assistant Professor, Department of Pathology and Laboratory Medicine, Tulane School of Medicine.
+###############################################################################
+# INSTRUCTIONS FOR RUNNING CLUSTAL W WEB TOOL
+###############################################################################
+#	1) Open the CLUSTAL W homepage at http://www.genome.jp/tools-bin/clustalw
+# 	2) Copy and paste the fasta sequences from MSA_sequences_file.fasta 
+# 		(provided) or upload the file
+# 	3) Output format can remain as default
+# 	4) For pairwise alignment select SLOW/ACCURATE
+# 	5) Execute Multiple Alignment
+#	6) From the tree menu try executing with Neighbor-joining/UPGMA formats
 
-###############################################################################################################################################################
+################################################################################
+# INSTRUCTIONS FOR MULTIPLE SEQUENCE ALIGNMENTS WITH BIOPYTHON
+################################################################################
+# Download CLUSTAL W and MUSCLE on your system
+################################################################################
 
-###############################################################################################################################################################
-
-INSTRUCTIONS FOR RUNNING CLUSTAL W WEB TOOL
-
-###############################################################################################################################################################
-
-	1) Open the CLUSTAL W homepage at http://www.genome.jp/tools-bin/clustalw
-	2) Copy and paste the fasta sequences from MSA_sequences_file.fasta (provided) or upload the file
-	3) Output format can remain as default
-	4) For pairwise alignment select SLOW/ACCURATE
-	5) Execute Multiple Alignment
-	6) From the tree menu try executing with Neighbor-joining/UPGMA formats
-
-
-################################################################################################################################################################
-
-INSTRUCTIONS FOR MULTIPLE SEQUENCE ALIGNMENTS WITH BIOPYTHON
-
-###############################################################################################################################################################
-
-Download CLUSTAL W and MUSCLE on your system
-
-###############################################################################################################################################################
-
-* CLUSTALW
-
-* From Unix terminal change directory to the current directory where you have all the files
-
-*For windows
+#  CLUSTALW
+#  From Cygwin terminal, change directory to the current directory where you have 
+#  all the files
 
 ```
 curl -O http://www.clustal.org/download/current/clustalw-2.1-win.msi
+run msiexec //a clustalw-2.1-win.msa
 ```
 
-*Go to the directory in Windows Explorer, double click on msi to install
-*Clustalw2.exe will be placed by installer in C:\Program Files (x86)\clustalw32.exe
-* The command below will copy the EXE so bash can find it
+# Go to the directory in Windows Explorer, double click on .msi file to install
+# clustalw2.exe will be placed by installer in 
+# 	C:\Program Files (x86)\clustalw32.exe
+# The command below will copy the EXE so the Bash shell can find it
 
 ```
 cp '/cygdrive/c/Program Files (x86)/ClustalW2/clustalw2.exe' /usr/local/bin
 ```
 
-* MUSCLE
+# MUSCLE Installation
 
 ```
-curl -OL https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86win32.exe
-chmod +x muscle3.8.31_i86win32.exe
-mv muscle3.8.31_i86win32.exe muscle.exe
-cp muscle C:\cygwin\usr\local\bin
+curl -OL https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86cygwin32.exe
+chmod +x muscle3.8.31_i86cygwin32.exe
+mv muscle3.8.31_i86cygwin32.exe muscle.exe
+cp muscle.exe /usr/local/bin
 ```
 
-
-#############################################################################################################################################################
-
-Running CLUSTAL W and MUSCLE with BIOPYTHON
-
-#############################################################################################################################################################
-
-
-*To run CLUSTAL W and MUSCLE using biopython, run these commands from unix shell
-
+###############################################################################
+# Running CLUSTAL W and MUSCLE with BioPython
+###############################################################################
+# To run CLUSTAL W and MUSCLE using BioPython, 
+# run these commands from Bash shell
 ```
 python3 biopython_clustalw.py
-```
-
-
-```
 python3 biopython_muscle.py
 ```
