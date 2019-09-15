@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ###############################################################################
 # Multiple Sequence Alignment - In-Class Lab - Windows Install Guide
 
@@ -28,35 +30,22 @@
 #  From Cygwin terminal, change directory to the current directory where you have 
 #  all the files
 
-```
 curl -O http://www.clustal.org/download/current/clustalw-2.1-win.msi
-run msiexec //a clustalw-2.1-win.msa
-```
+run msiexec //a clustalw-2.1-win.msi /qn TARGETDIR=C:\\
+cp '/cygdrive/c/clustalw2.exe' /usr/local/bin
 
-# Go to the directory in Windows Explorer, double click on .msi file to install
-# clustalw2.exe will be placed by installer in 
-# 	C:\Program Files (x86)\clustalw32.exe
-# The command below will copy the EXE so the Bash shell can find it
+# MUSCLE Installation - Cygwin version does not work with Chocolatey install
 
-```
-cp '/cygdrive/c/Program Files (x86)/ClustalW2/clustalw2.exe' /usr/local/bin
-```
-
-# MUSCLE Installation
-
-```
-curl -OL https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86cygwin32.exe
-chmod +x muscle3.8.31_i86cygwin32.exe
-mv muscle3.8.31_i86cygwin32.exe muscle.exe
+curl -OL https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86win32.exe
+chmod +x muscle3.8.31_i86win32.exe
+mv muscle3.8.31_i86win32.exe muscle.exe
 cp muscle.exe /usr/local/bin
-```
 
 ###############################################################################
 # Running CLUSTAL W and MUSCLE with BioPython
 ###############################################################################
 # To run CLUSTAL W and MUSCLE using BioPython, 
 # run these commands from Bash shell
-```
-python3 biopython_clustalw.py
-python3 biopython_muscle.py
-```
+
+python biopython_clustalw.py
+python biopython_muscle.py
