@@ -44,7 +44,7 @@ mv muscle3.8.31_i86darwin64 muscle
 cp muscle /usr/local/bin
 
 #############################################################################################################################################################
-# T-COFFEE installation on Mac =OS
+# T-COFFEE installation on MacOS
 #############################################################################################################################################################
 
 # Downloads and run installer
@@ -52,30 +52,14 @@ curl -OL http://www.tcoffee.org/Packages/Beta/Latest/T-COFFEE_distribution_Versi
 tar xvfz T-COFFEE_distribution_Version_13.40.5.a96e565.tar.gz
 cd T-COFFEE_distribution_Version_13.40.5.a96e565
 
-# you may have to enter passwords and answer questions
-
 ./install tcoffee
 ./install all
 
-# install new clang compiler does not work
-
-# brew install llvm 
-# export PATH="/usr/local/opt/llvm/bin:$PATH"
-# echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.bash_profile
-# source ~/.bash_profile
-
-# fails due to ???
-# ./install rcoffee
-
-# fails due to clang: error: the clang compiler does not support '-traditional'
-# ./install expresso 
-# ./install 3dcoffee
-
 # add t_coffee to path and Bash config file
 
-export PATH=~/.t_coffee/plugins/macosx:$PATH
+export PATH=~/.t_coffee/bin/macosx:$PATH
 export PLUGINS_4_TCOFFEE=~/.t_coffee/plugins/macosx:
-echo 'export PATH="~/.t_coffee/plugins/macosx:$PATH"' >> ~/.bash_profile
+echo 'export PATH="~/.t_coffee/bin/macosx:$PATH"' >> ~/.bash_profile
 echo 'export PLUGINS_4_TCOFFEE="~/.t_coffee/plugins/macosx:"' >> ~/.bash_profile
 source ~/.bash_profile
 

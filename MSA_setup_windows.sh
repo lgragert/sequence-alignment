@@ -98,7 +98,7 @@ export PATH=~/.t_coffee/bin/windows:$PATH
 export PLUGINS_4_TCOFFEE=~/.t_coffee/plugins/windows:
 echo 'export PATH="~/.t_coffee/bin/windows:$PATH"' >> ~/.bash_profile
 echo 'export PLUGINS_4_TCOFFEE="~/.t_coffee/plugins/windows:"' >> ~/.bash_profile
-source ~./bash_profile
+source ~/.bash_profile
 cp ~/.t_coffee/bin/windows/t_coffee.exe /usr/local/bin/
 
 # T-Coffee no longer seems to require these Perl modules
