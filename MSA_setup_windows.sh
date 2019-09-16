@@ -41,19 +41,23 @@ chmod +x muscle3.8.31_i86win32.exe
 mv muscle3.8.31_i86win32.exe muscle.exe
 cp muscle.exe /usr/local/bin
 
-# T-Coffee for Windows - not supported - this is a work in progress
+# T-Coffee for Windows - not officially supported
 
 # Install Cygwin compilers and devel tools
+choco install strawberryperl
 apt-cyg install fort77
 apt-cyg install libcrypt-devel
 apt-cyg install gcc-g++
+apt-cyg install make
 apt-cyg install openssl-devel
 apt-cyg install libexpat-devel
 apt-cyg install httpd-devel
 apt-cyg install libgdbm-devel
 apt-cyg install gdbm
-apt-cyg install apache
-apt-cyg install make
+apt-cyg install libncurses-devel
+apt-cyg install libreadline-devel
+apt-cyg install libnsl-devel
+
 
 # Download T-Coffee Source Distribution using curl
 curl -OL http://www.tcoffee.org/Packages/Stable/Latest/T-COFFEE_distribution_Version_13.39.0.d675aed.tar.gz
@@ -65,33 +69,6 @@ tar xvf T-COFFEE_distribution_Version_13.39.0.d675aed.tar.gz
 cd T-COFFEE_distribution_Version_13.39.0.d675aed
 ./install tcoffee
 ./install all
-./install mafft
-./install clustalo
-./install hmmtop
-./install msa
-
-# Plugins we are not installing
-# ./install clustalw
-# ./install upp
-# ./install dcacd
-# ./install probconsRNA
-# ./install mus4
-# ./install amap
-# ./install proda
-# ./install prank
-# ./install fsa
-# ./install sfold
-# ./install fugueali
-# ./install mustang
-# ./install TMalign
-# ./install poa
-# ./install RNAplfold
-# ./install gorIV
-# ./install legacy_blast.pl
-
-# Plugins that fail install
-# ./install dialign-tx
-# ./install dialign-t
 
 cd ..
 export PATH=~/.t_coffee/bin/windows:$PATH
@@ -100,39 +77,6 @@ echo 'export PATH="~/.t_coffee/bin/windows:$PATH"' >> ~/.bash_profile
 echo 'export PLUGINS_4_TCOFFEE="~/.t_coffee/plugins/windows:"' >> ~/.bash_profile
 source ~/.bash_profile
 cp ~/.t_coffee/bin/windows/t_coffee.exe /usr/local/bin/
-
-# T-Coffee no longer seems to require these Perl modules
-# Install XML::Simple and SOAP::Lite CPAN Modules for Perl
-# Force installs currently required for several of these modules
-# Installs took hours
-# mod_perl2 is apache
-
-# choco install strawberryperl
-
-# cpan -fi YAML
-# cpan -fi inc::latest
-# cpan -fi PAR
-# cpan -fi Inline
-# cpan -fi Module::Build::Tiny
-# cpan -fi Dist::Zilla
-# cpan -fi Dist::Milla
-# cpan -fi Minilla
-# cpan -fi App::ModuleBuildTiny
-# cpan -fi Software::License
-# cpan -fi PL_files
-# cpan -fi File::ShareDir
-# cpan -fi Module::Signature
-# cpan -fi CPANPLUS
-# cpan -fi Devel::AssertOS::Unix
-# cpan -fi Module::Build
-# cpan -fi mod_perl2
-# cpan -fi XML::SemanticDiff
-# cpan -fi SOAP::Transport::TCP
-# cpan -fi XMLRPC::Lite
-# cpan -fi XML::Parser::Lite
-# cpan -fi XML::Simple
-# cpan -fi SOAP::Lite
-
 
 ###############################################################################
 # Running CLUSTAL W and MUSCLE with BioPython
