@@ -1,17 +1,17 @@
-#!bin/bash
+#!/bin/bash
 
 # Make sure you are in working directory
 
 #Download HMMER
-curl -OL http://eddylab.org/software/hmmer3/3.1b2/hmmer-3.1b2-cygwin64.tar.gz
+curl -OL http://eddylab.org/software/hmmer/hmmer.tar.gz
 
 # Install GCC compiler and make
 apt-cyg install gcc-core
 apt-cyg install make
 
-#unpack
-tar xvf hmmer-3.1b2-cygwin64.tar.gz
-cd hmmer-3.1b2-cygwin64
+# unpack
+tar zvf hmmer.tar.gz
+cd hmmer-3.2.1
 
 # Compile the software with configure and make - Installs in /usr/local/bin/
 ./configure --prefix /usr/local

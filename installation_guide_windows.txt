@@ -34,7 +34,7 @@ choco install cygwin
 
 ```
 cd C:\tools\cygwin\
-./cygwinsetup.exe -q -P wget,tar,qawk,bzip2,vim,lynx,git
+./cygwinsetup.exe -q -P wget,tar,qawk,bzip2,vim,lynx,git,make,apache
 ```
 
 # Close MS PowerShell and Use Cygwin from here
@@ -68,21 +68,23 @@ choco install vscode
 
 ```
 choco install python3
+cp /cygdrive/c/Python37/bin/python.exe /usr/local/bin/python3.exe
 ```
 
 # BioPython and SciPy module install - Conda is the package manager for Python modules
 # May need to close and reopen Cygwin
 
 ```
-python -m pip install --upgrade pip
-pip install biopython
-pip install scipy
+python3 -m pip3 install --upgrade pip
+pip3 install biopython
+pip3 install scipy
+pip3 install pandas
 ```
 
 # Install Jupyter Notebook to run Python code interactively
 
 ```
-pip install jupyterlab
+pip3 install jupyterlab
 ```
 
 # PuTTY - SSH - Needed to connect to Cypress

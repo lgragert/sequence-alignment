@@ -51,6 +51,7 @@ brew install python3
 ```
 pip3 install biopython
 pip3 install scipy
+pip3 install pandas
 ```
 
 # Jupyter Notebook to run Python code interactively

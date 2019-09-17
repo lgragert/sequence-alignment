@@ -48,6 +48,7 @@ cpan -fi XML::Simple
 
 # These installs seem to require some Apache configuration - Hit Ctrl-C to stop
 cpan -fi mod_perl2
+cpan -fi Bundle::Apache
 cpan -fi SOAP::Lite
 
 # Download T-Coffee Source Distribution using curl
