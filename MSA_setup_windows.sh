@@ -32,6 +32,11 @@ curl -O http://www.clustal.org/download/current/clustalw-2.1-win.msi
 run msiexec /a clustalw-2.1-win.msi /qn TARGETDIR=C:\\
 cp '/cygdrive/c/clustalw2.exe' /usr/local/bin
 
+# CLUSTAL Omega installation
+curl -O http://www.clustal.org/omega/clustal-omega-1.2.2-win64.zip
+unzip clustal-omega-1.2.2-win64.zip
+
+
 # MUSCLE Installation - Uses regular Win32 version
 # Cygwin version does not work with Chocolatey install
 
@@ -46,5 +51,5 @@ cp muscle.exe /usr/local/bin
 # To run CLUSTALW and MUSCLE using BioPython, 
 # run these commands from Bash shell
 
-python biopython_clustalw.py
-python biopython_muscle.py
+python3 biopython_clustalw.py
+python3 biopython_muscle.py

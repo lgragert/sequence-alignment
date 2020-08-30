@@ -2,7 +2,7 @@
 
 ###############################################################################
 # Hidden Markov Models
-# Instructor: Dr Loren Gragert
+# Loren Gragert, PhD
 # Assistant Professor
 # Department of Pathology and Laboratory Medicine
 # Tulane School of Medicine
@@ -33,7 +33,8 @@
 ###############################################################################
 # INSTRUCTIONS FOR HMMER COMMANDLINE
 ###############################################################################
-# INSTALL HMMER IN YOUR SYSTEM USING HMMER_installation_mac.sh for MACOSX and 
+# INSTALL HMMER IN YOUR SYSTEM USING either
+# HMMER_installation_mac.sh for MACOSX or
 # HMMER_installation_windows.sh for Windows
 # bash HMMER_installation_mac.sh
 ###############################################################################

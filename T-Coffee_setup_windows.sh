@@ -52,13 +52,13 @@ cpan -fi Bundle::Apache
 cpan -fi SOAP::Lite
 
 # Download T-Coffee Source Distribution using curl
-curl -OL http://www.tcoffee.org/Packages/Stable/Latest/T-COFFEE_distribution_Version_13.39.0.d675aed.tar.gz
+curl -OL http://www.tcoffee.org/Packages/Stable/Latest/T-COFFEE_distribution_Version_13.41.0.28bdc39.tar.gz
 
 # Extract T-Coffee source code archive
-tar xvf T-COFFEE_distribution_Version_13.39.0.d675aed.tar.gz
+tar xvf T-COFFEE_distribution_Version_13.41.0.28bdc39.tar.gz
 
 # Compile and Install T-Coffee and select plugins
-cd T-COFFEE_distribution_Version_13.39.0.d675aed
+cd T-COFFEE_distribution_Version_13.41.0.28bdc39
 ./install tcoffee
 ./install all
 
@@ -70,4 +70,4 @@ echo 'export PLUGINS_4_TCOFFEE="~/.t_coffee/plugins/windows:"' >> ~/.bash_profil
 source ~/.bash_profile
 cp ~/.t_coffee/bin/windows/t_coffee.exe /usr/local/bin/
 
-python biopython_tcoffee.py
+python3 biopython_tcoffee.py

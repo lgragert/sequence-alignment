@@ -23,34 +23,32 @@
 ###############################################################################
 # INSTRUCTIONS FOR MULTIPLE SEQUENCE ALIGNMENTS WITH BIOPYTHON
 ###############################################################################
-# Download and Install CLUSTAL W and MUSCLE on your system
+# Download and Install CLUSTAL and MUSCLE on your system
 ###############################################################################
 
 # From Unix terminal change directory to the current directory where you have 
 # all the files
 
-# CLUSTALW
+# CLUSTALW and Clustal Omega
 
 curl -O http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg
 hdiutil attach ./clustalw-2.1-macosx.dmg
 cp /Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2 /usr/local/bin/
 
+brew install clustal-omega
+
 # MUSCLE
 
-curl -OL https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86darwin64.tar.gz
-tar xvfz muscle3.8.31_i86darwin64.tar.gz
-chmod +x muscle3.8.31_i86darwin64
-mv muscle3.8.31_i86darwin64 muscle
-cp muscle /usr/local/bin
+brew install muscle
 
 #############################################################################################################################################################
 # T-COFFEE installation on MacOS
 #############################################################################################################################################################
 
 # Downloads and run installer
-curl -OL http://www.tcoffee.org/Packages/Beta/Latest/T-COFFEE_distribution_Version_13.40.5.a96e565.tar.gz
-tar xvfz T-COFFEE_distribution_Version_13.40.5.a96e565.tar.gz
-cd T-COFFEE_distribution_Version_13.40.5.a96e565
+curl -OL http://www.tcoffee.org/Packages/Beta/Latest/T-COFFEE_distribution_Version_13.41.144.2fab1cd.tar.gz
+tar xvfz T-COFFEE_distribution_Version_13.41.144.2fab1cd.tar.gz
+cd T-COFFEE_distribution_Version_13.41.144.2fab1cd
 
 ./install tcoffee
 ./install all
