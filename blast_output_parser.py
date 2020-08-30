@@ -5,7 +5,7 @@ import Bio
 from Bio.Blast import NCBIXML
 
 
-out_filename = "BLAST_results.csv"
+out_filename = "BLAST_ARC_results.csv"
 out_file = open(out_filename, "w")
 out_file.write("Viral_protein" + "," + "E-value" + "," + "Length" + "," + "Raw_score" + "," + "Bit_score" + "," + "hsp_query" + "," + "hsp_match" + ","
 	+ "hsp_sbjct" + "," + "Gaps" + "\n")
@@ -13,7 +13,7 @@ out_file.write("Viral_protein" + "," + "E-value" + "," + "Length" + "," + "Raw_s
 
 
 
-in_file = "blast_output.xml"
+in_file = "BLAST_ARC_output.xml"
 result_handle = open(in_file)
 blast_records=NCBIXML.parse(result_handle)
 blast_record = next(blast_records)
