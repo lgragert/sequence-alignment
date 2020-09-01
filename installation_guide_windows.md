@@ -22,12 +22,18 @@ Powershell can be "Run As Administrator" by default by doing the following:
 
 Copy the following commands inside backticks ``` and paste in Powershell (and later Cygwin terminal)
 
-Use WordPad to open this text file to start - until you have Visual Studio Code installed.
+Use WordPad to open this Markdown text file to start - until you have Visual Studio Code installed.
+
 
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n allowGlobalConfirmation
 ```
+
+If McAfee is blocking PowerShell from connecting to Internet
+try this instructions.
+
+https://service.mcafee.com/webcenter/portal/oracle/webcenter/page/scopedMD/s55728c97_466d_4ddb_952d_05484ea932c6/Page29.jspx?wc.contextURL=%2Fspaces%2Fcp&articleId=TS100813&_afrLoop=1019282233807360&leftWidth=0%25&showFooter=false&showHeader=false&rightWidth=0%25&centerWidth=100%25#!%40%40%3FshowFooter%3Dfalse%26_afrLoop%3D1019282233807360%26articleId%3DTS100813%26leftWidth%3D0%2525%26showHeader%3Dfalse%26wc.contextURL%3D%252Fspaces%252Fcp%26rightWidth%3D0%2525%26centerWidth%3D100%2525%26_adf.ctrl-state%3D1879qapug4_9
 
 
 
@@ -174,6 +180,19 @@ The `/cygdrive/c/` folder on Cygwin is the same as `C:\` in Windows filesystem.
 Right-click on file in Explorer to select which program to use to open a file.
 
 You can also type `code <filename>` in Cygwin to open a file.
+
+
+
+#### Clone the sequence-alignment Github repository for the class:
+
+Contains the scripts for the in-class labs on sequence alignment.
+
+```
+mkdir ~/dev/
+cd ~/dev/
+git clone https://github.com/lgragert/sequence-alignment.git
+cd sequence-alignment
+```
 
 
 
