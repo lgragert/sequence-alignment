@@ -237,6 +237,6 @@ curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
 Add-AppxPackage .\ubuntu-2004.appx
 ```
 
-Launch Ubuntu and set username and password.
+Launch Ubuntu 20.04 LTS from Windows menu and set username and password.
 
 Now you have a Linux development environment that might work better than Cygwin.
