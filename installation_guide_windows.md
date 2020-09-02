@@ -229,12 +229,12 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-Restart machine then go back into Powershell:
+Restart machine then go back into Powershell to download Ubuntu LTS 20.04 and complete install:
 
 ```
 wsl --set-default-version 2
 curl.exe -L -o ubuntu-2004.appx https://aka.ms/wsl-ubuntu-2004
-Add-AppxPackage .\app_name.appx
+Add-AppxPackage .\ubunto-2004.appx
 ```
 
 Launch Ubuntu and set username and password.
