@@ -220,6 +220,8 @@ pip3 list --outdated --format=freeze | awk 'BEGIN { FS = "=" } ; { print $1 }' |
 
 #### Windows Subsystem for Linux (WSL2) Install - Alternative to Cygwin that installs Linux distribution on your PC:
 
+This will only be an option for users who have updated to the very latest version of Windows 10.
+
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
 Install Windows Subsystem for Linux using Powershell :
