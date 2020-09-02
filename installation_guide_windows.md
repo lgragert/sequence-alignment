@@ -233,9 +233,9 @@ Restart machine then go back into Powershell:
 
 ```
 wsl --set-default-version 2
+curl.exe -L -o ubuntu-2004.appx https://aka.ms/wsl-ubuntu-2004
+Add-AppxPackage .\app_name.appx
 ```
-
-Install Ubuntu 20.04 LTS using Microsoft Store - https://www.microsoft.com/store/apps/9n6svws3rx71
 
 Launch Ubuntu and set username and password.
 
