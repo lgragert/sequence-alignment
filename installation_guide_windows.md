@@ -79,6 +79,7 @@ If the Lynx install fails due to McAfee antivirus, here's an alternative install
 #### Visual Studio Code Installation - Text Editor
 
 ```
+choco feature enable -n allowGlobalConfirmation
 choco install vscode
 ```
 
@@ -242,3 +243,5 @@ Add-AppxPackage .\ubuntu-2004.appx
 Launch Ubuntu 20.04 LTS from Windows menu and set username and password.
 
 Now you have a Linux development environment that might work better than Cygwin.
+
+Linux packages can be installed with `apt-get`, which is the package manager for Ubuntu.
