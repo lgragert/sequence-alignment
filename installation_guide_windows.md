@@ -229,7 +229,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-Restart machine:
+Restart machine then go back into Powershell:
 
 ```
 wsl --set-default-version 2
