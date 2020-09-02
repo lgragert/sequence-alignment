@@ -233,8 +233,8 @@ Restart machine then go back into Powershell to download Ubuntu LTS 20.04 and co
 
 ```
 wsl --set-default-version 2
-curl.exe -L -o ubuntu-2004.appx https://aka.ms/wsl-ubuntu-2004
-Add-AppxPackage .\ubunto-2004.appx
+curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
+Add-AppxPackage .\ubuntu-2004.appx
 ```
 
 Launch Ubuntu and set username and password.
