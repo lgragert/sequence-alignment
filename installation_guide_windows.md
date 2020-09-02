@@ -106,7 +106,7 @@ https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cy
 
 ```
 choco install python3 --version==3.8.5
-cp /cygdrive/c/Python38/bin/python.exe /usr/local/bin/python3.exe
+cp /cygdrive/c/Python38/python.exe /usr/local/bin/python3.exe
 ```
 
 
