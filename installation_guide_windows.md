@@ -227,6 +227,11 @@ Install Windows Subsystem for Linux using Powershell :
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+Restart machine:
+
+```
 wsl --set-default-version 2
 ```
 
