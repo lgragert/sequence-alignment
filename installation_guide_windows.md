@@ -118,6 +118,7 @@ May need to close and reopen Cygwin
 pip3 is the package manager for Python modules
 
 ```
+python3 -m pip install --upgrade pip
 pip3 install biopython
 pip3 install scipy
 pip3 install pandas
