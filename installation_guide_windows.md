@@ -79,6 +79,7 @@ If the Lynx install fails due to McAfee antivirus, here's an alternative install
 #### Visual Studio Code Installation - Text Editor
 
 ```
+choco feature enable -n allowGlobalConfirmation
 choco install vscode
 ```
 
@@ -106,7 +107,7 @@ https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cy
 
 ```
 choco install python3 --version==3.8.5
-cp /cygdrive/c/Python38/bin/python.exe /usr/local/bin/python3.exe
+cp /cygdrive/c/Python38/python.exe /usr/local/bin/python3.exe
 ```
 
 
@@ -118,7 +119,7 @@ May need to close and reopen Cygwin
 pip3 is the package manager for Python modules
 
 ```
-python3 -m pip3 install --upgrade pip
+python3 -m pip install --upgrade pip
 pip3 install biopython
 pip3 install scipy
 pip3 install pandas
@@ -220,6 +221,8 @@ pip3 list --outdated --format=freeze | awk 'BEGIN { FS = "=" } ; { print $1 }' |
 
 #### Windows Subsystem for Linux (WSL2) Install - Alternative to Cygwin that installs Linux distribution on your PC:
 
+This will only be an option for users who have updated to the very latest version of Windows 10.
+
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
 Install Windows Subsystem for Linux using Powershell :
@@ -227,11 +230,18 @@ Install Windows Subsystem for Linux using Powershell :
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-wsl --set-default-version 2
 ```
 
-Install Ubuntu 20.04 LTS using Microsoft Store - https://www.microsoft.com/store/apps/9n6svws3rx71
+Restart machine then go back into Powershell to download Ubuntu LTS 20.04 and complete install:
 
-Launch Ubuntu and set username and password.
+```
+wsl --set-default-version 2
+curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
+Add-AppxPackage .\ubuntu-2004.appx
+```
+
+Launch Ubuntu 20.04 LTS from Windows menu and set username and password.
 
 Now you have a Linux development environment that might work better than Cygwin.
+
+Linux packages can be installed with `apt-get`, which is the package manager for Ubuntu.
