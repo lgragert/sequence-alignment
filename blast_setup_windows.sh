@@ -29,6 +29,11 @@ PATH=/usr/local/ncbi/blast/bin:$PATH # add path for session
 echo 'export PATH="/usr/local/ncbi/blast/bin:$PATH"' >> ~/.bash_profile
 cd ../.. # go back to working directory
 
+# Handle Windows 10 virtual memory issue
+# makeblastdb attempts to allocate a very large amount of virtual memory
+# https://www.biostars.org/p/413294/
+echo 'export BLASTDB_LMDB_MAP_SIZE=1000000' >> ~/.bash_profile
+
 # Make a directory to store the BLAST database
 mkdir blastdb
 cd blastdb
