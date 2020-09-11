@@ -95,6 +95,7 @@ In Explorer - Right-click file -> Open With -> Visual Studio Code
 
 ```
 choco install git
+git config --global core.autocrlf false
 ```
 
 
