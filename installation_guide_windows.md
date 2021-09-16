@@ -62,7 +62,8 @@ Search for Cygwin and right-click Cygwin64 Terminal to Run As Administrator
 
 Right-Click Cygwin64 Terminal Icon on taskbar and Pin to Taskbar
 
-To always run Cygwin as Administrator: Right-click Cygwin -> Properties -> Advanced -> Run as Admin
+To always run Cygwin as Administrator: Right-click Cygwin Icon in Taskbar -> Right-click Cygwin64 Terminal -> Properties -> Advanced -> Run as Admininstrator
+
 
 If the Lynx install fails due to McAfee antivirus, here's an alternative install method for Curl:
 
