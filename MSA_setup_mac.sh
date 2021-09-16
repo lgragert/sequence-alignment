@@ -46,9 +46,10 @@ brew install muscle
 #############################################################################################################################################################
 
 # Downloads and run installer
-curl -OL http://www.tcoffee.org/Packages/Beta/Latest/T-COFFEE_distribution_Version_13.41.144.2fab1cd.tar.gz
-tar xvfz T-COFFEE_distribution_Version_13.41.144.2fab1cd.tar.gz
-cd T-COFFEE_distribution_Version_13.41.144.2fab1cd
+curl -OL http://www.tcoffee.org/Packages/Beta/Latest/T-COFFEE_distribution_Version_13.45.47.aba98c5.tar.gz
+tar xvfz T-COFFEE_distribution_Version_13.45.47.aba98c5.tar.gz
+cd T-COFFEE_distribution_Version_13.45.47.aba98c5
+
 
 ./install tcoffee
 ./install all

@@ -35,7 +35,8 @@ cp '/cygdrive/c/clustalw2.exe' /usr/local/bin
 # CLUSTAL Omega installation
 curl -O http://www.clustal.org/omega/clustal-omega-1.2.2-win64.zip
 unzip clustal-omega-1.2.2-win64.zip
-
+cp ./clustal-omega-1.2.2-win64/clustalo.exe /usr/local/bin
+chmod +x /usr/local/bin/clustalo.exe
 
 # MUSCLE Installation - Uses regular Win32 version
 # Cygwin version does not work with Chocolatey install
