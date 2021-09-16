@@ -1,7 +1,7 @@
 # MACOS SOFTWARE INSTALLATION GUIDE
 Open MacOS Terminal program.
 
-Copy and paste commands between backticks ```
+Copy and paste commands between backticks ``` (or grey boxes on GitHub webpage)
 
 
 
@@ -16,7 +16,7 @@ xcode-select --install
 #### Homebrew: The missing package manager for MacOS (https://brew.sh/)
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 
@@ -44,7 +44,7 @@ brew install git
 #### iTerm2 - alternative Mac terminal with more features:
 
 ```
-brew cask install iterm2
+brew install iterm2
 ```
 
 
@@ -52,7 +52,7 @@ brew cask install iterm2
 #### Visual Studio Code Text Editor
 
 ```
-brew cask install visual-studio-code
+brew install visual-studio-code
 ```
 
 
@@ -69,7 +69,7 @@ brew install python3
 
 #### BioPython module install
 
-Pip3 is the package manager for Python modules
+Pip3 is the package manager for Python modules - Don't worry about DEPRECATION warnings
 
 ```
 pip3 install biopython
@@ -92,17 +92,17 @@ pip3 install jupyterlab
 #### PyCharm - IDE for Python (optional)
 
 ```
-brew cask install pycharm-ce
+brew install pycharm-ce
 ```
 
 
 
-#### R and RStudio IDE
+#### R and RStudio Integrated Development Environment (IDE)
 
 ```
-brew cask install java
+brew install java
 brew install R
-brew cask install rstudio
+brew install rstudio
 ```
 
 
@@ -114,7 +114,7 @@ Lots of software packages can be installed and updated through Cask.
 For example, to install Google Chrome:
 
 ```
-brew cask install google-chrome
+brew install google-chrome
 ```
 
 
@@ -142,16 +142,22 @@ cd sequence-alignment
 
 
 
-#### Updating packages managed by HomeBrew - Run every few weeks
+#### Updating packages managed by Homebrew - Run every few weeks
 
 ```
-brew update && brew cleanup && brew cask cleanup
-brew cu
+brew update && brew upgrade --greedy && brew cleanup
+brew cu --all
 ```
 
 This command updates all installed Python packages:
 
 ```
 pip3 list --outdated --format=freeze | awk 'BEGIN { FS = "=" } ; { print $1 }' | xargs -n1 pip3 install -U
+```
+
+This command updates all installed R packages:
+
+```
+Rscript -e 'update.packages(ask=FALSE,dependencies=c("Suggests"),repos="http://cran.wustl.edu/")'
 ```
 
