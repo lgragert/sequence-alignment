@@ -228,32 +228,3 @@ This command updates all installed Python packages:
 ```
 pip3 list --outdated --format=freeze | awk 'BEGIN { FS = "=" } ; { print $1 }' | xargs -n1 pip3 install -U
 ```
-
-
-
-#### Windows Subsystem for Linux (WSL2) Install - Alternative to Cygwin that installs Linux distribution on your PC:
-
-This will only be an option for users who have updated to the very latest version of Windows 10.
-
-https://docs.microsoft.com/en-us/windows/wsl/install-win10
-
-Install Windows Subsystem for Linux using Powershell :
-
-```
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-```
-
-Restart machine then go back into Powershell to download Ubuntu LTS 20.04 and complete install:
-
-```
-wsl --set-default-version 2
-curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
-Add-AppxPackage .\ubuntu-2004.appx
-```
-
-Launch Ubuntu 20.04 LTS from Windows menu and set username and password.
-
-Now you have a Linux development environment that might work better than Cygwin.
-
-Linux packages can be installed with `apt-get`, which is the package manager for Ubuntu.
