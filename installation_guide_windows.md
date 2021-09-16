@@ -6,19 +6,23 @@
 
 Package managers allow users to install and update software from the command line
 
-Open an admin Powershell Window - right-click Run As Administrator 
+Open an admin Powershell window - right-click Run As Administrator 
 
 Powershell can be "Run As Administrator" by default by doing the following:
 
-1) Search Powershell from Windows Explorer (or Cortana if using Windows 10 and pin to taskbar)
+1) Right-Click the Desktop -> New -> Shortcut
 
-2) After pinning to taskbar, right-click the Powershell icon on the taskbar
+2) Type "Powershell" in the box in the popup window and name it Powershell and click Finish.
 
-3) Right-click again on the "Windows Powershell" option from the drop down menu and left-click "Properties"
+3) Right-click on the shortcut on the Desktop
 
 4) Under "Shortcut tab" left-click "Advanced..." button"
 
-5) Make sure the box next to "Run As Administrator" is checked and then click "Apply"
+5) Click the box next to "Run As Administrator" then click "OK"
+
+6) Right-click Powershell in the taskbar and Click "Pin to Taskbar"
+
+7) When you open Powershell from now on it should say "Adminstrator: Powershell" at the top.
 
 Copy the following commands inside backticks ``` and paste in Powershell (and later Cygwin terminal)
 
@@ -26,12 +30,12 @@ Use WordPad to open this Markdown text file to start - until you have Visual Stu
 
 
 ```
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 choco feature enable -n allowGlobalConfirmation
 ```
 
 If McAfee is blocking PowerShell from connecting to Internet
-try this instructions.
+try these instructions.
 
 https://service.mcafee.com/webcenter/portal/oracle/webcenter/page/scopedMD/s55728c97_466d_4ddb_952d_05484ea932c6/Page29.jspx?wc.contextURL=%2Fspaces%2Fcp&articleId=TS100813&_afrLoop=1019282233807360&leftWidth=0%25&showFooter=false&showHeader=false&rightWidth=0%25&centerWidth=100%25#!%40%40%3FshowFooter%3Dfalse%26_afrLoop%3D1019282233807360%26articleId%3DTS100813%26leftWidth%3D0%2525%26showHeader%3Dfalse%26wc.contextURL%3D%252Fspaces%252Fcp%26rightWidth%3D0%2525%26centerWidth%3D100%2525%26_adf.ctrl-state%3D1879qapug4_9
 
@@ -79,7 +83,6 @@ If the Lynx install fails due to McAfee antivirus, here's an alternative install
 #### Visual Studio Code Installation - Text Editor
 
 ```
-choco feature enable -n allowGlobalConfirmation
 choco install vscode
 ```
 
@@ -107,8 +110,8 @@ Anaconda does not work with Cygwin and Chocolatey
 https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cygwin-on-windows/45291648
 
 ```
-choco install python3 --version==3.8.5
-cp /cygdrive/c/Python38/python.exe /usr/local/bin/python3.exe
+choco install python3 --version==3.9.7
+cp /cygdrive/c/Python39/python.exe /usr/local/bin/python3.exe
 ```
 
 
@@ -144,7 +147,7 @@ choco install putty
 
 
 
-#### R and RStudio
+#### R and RStudio Integrated Development Environment (IDE)
 
 ```
 choco install r.project
@@ -167,7 +170,7 @@ On your Windows filesystem, you should have a `C:\tools\cygwin\home\<username>` 
 
 In Cygwin, the same directory is `/home/<username>/`.
 
-This home directory is good place to put all your files.
+This home directory is good place to put all your bioinformatics project files.
 
 You can create a `/dev/sequence-alignment` subdirectory in your home directory.
 
