@@ -97,8 +97,15 @@ In Explorer - Right-click file -> Open With -> Visual Studio Code
 
 #### Git Source Control Installation
 
+
+
 ```
 choco install git
+```
+
+You may have to restart Cygwin to apply this command:
+
+```
 git config --global core.autocrlf false
 ```
 
