@@ -19,6 +19,12 @@ xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+#### Curl - Downloads files from web / ftp
+
+```
+brew install curl
+```
+
 
 
 #### Install Additional Homebrew Repositories:
