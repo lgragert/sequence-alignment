@@ -17,8 +17,8 @@
 curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.12.0+-x64-macosx.tar.gz
 
 # Uncompresses BLAST distribution
-tar xzf ncbi-blast-2.12.0+-x64-macosx.tar.gz
-cd ncbi-blast-2.12.0+
+tar xzf ncbi-blast-2.13.0+-x64-macosx.tar.gz
+cd ncbi-blast-2.13.0+
 
 # copies BLAST binaries to /usr/local/ and add directory to PATH
 cd bin

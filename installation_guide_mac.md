@@ -131,7 +131,7 @@ brew install google-chrome
 chsh -s /bin/bash
 ```
 
-Default shell for MacOS Catalina is `zsh`, which might cause inconsistencies between MacOS versions that could impact our scripts.
+Default shell for MacOS is `zsh`, which might cause inconsistencies between MacOS versions that could impact our scripts.
 
 
 
@@ -151,7 +151,7 @@ cd sequence-alignment
 #### Updating packages managed by Homebrew - Run every few weeks
 
 ```
-brew update && brew upgrade --greedy && brew cleanup
+brew update && brew upgrade && brew cleanup
 brew cu --all
 ```
 
