@@ -14,7 +14,7 @@
 # Permission denied error? - run script with "sudo bash blast_setup_mac.sh"
 
 # Downloads BLAST Mac install - compressed using tar and gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.12.0+-x64-macosx.tar.gz
+curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.13.0+-x64-macosx.tar.gz
 
 # Uncompresses BLAST distribution
 tar xzf ncbi-blast-2.13.0+-x64-macosx.tar.gz
