@@ -52,8 +52,15 @@ Install Curl - Unix Command line tool for transferring data
 Install Lynx and other tools using Powershell
 
 ```
+cd C:\cygwin64\
+./cygwinsetup.exe -q -P wget,tar,gawk,bzip2,vim,lynx,make,httpd,curl,mintty
+```
+
+On some systems Cygwin is installing to a different directory C:\tools\cygwin\. If so, try this set of commands as an alternative.
+
+```
 cd C:\tools\cygwin\
-./cygwinsetup.exe -q -P wget,tar,qawk,bzip2,vim,lynx,make,apache,curl
+./cygwinsetup.exe -q -P wget,tar,gawk,bzip2,vim,lynx,make,httpd,curl,mintty
 ```
 
 Close MS PowerShell and Use Cygwin from here
@@ -118,15 +125,15 @@ Anaconda does not work with Cygwin and Chocolatey
 https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cygwin-on-windows/45291648
 
 ```
-choco install python3 --version=3.9.7
-cp /cygdrive/c/Python39/python.exe /usr/local/bin/python3.exe
+choco install python3 --version=3.10.7
+cp /cygdrive/c/Python310/python.exe /usr/local/bin/python3.exe
 ```
 
 
 
 #### BioPython and SciPy module install
 
-May need to close and reopen Cygwin
+Close and reopen Cygwin window so that the python3 command will be recognized.
 
 pip3 is the package manager for Python modules
 
@@ -146,15 +153,6 @@ pip3 install jupyterlab
 ```
 
 
-
-#### PuTTY - SSH - Needed to connect to Cypress
-
-```
-choco install putty
-```
-
-
-
 #### R and RStudio Integrated Development Environment (IDE)
 
 ```
@@ -164,19 +162,26 @@ choco install r.studio
 
 
 
-#### PyCharm CE IDE for Python - Integrated development environment with debugger
+#### IDE sfor Python - Integrated development environment with debugger
+
+PyCharm community
 
 ```
 choco install pycharm-community
 ```
 
+Spyder is another option that popular in science
+
+```
+pip3 install spyder
+```
 
 
 #### Download all scripts and files from Canvas to working directory
 
-On your Windows filesystem, you should have a `C:\tools\cygwin\home\<username>` folder.
+On your Windows filesystem, you should have a `C:\tools\cygwin\home\<username>` folder (or `C:\cygwin64\home\<username>`).
 
-In Cygwin, the same directory is `/home/<username>/`.
+In Cygwin, the same directory maps to `/home/<username>/`.
 
 This home directory is good place to put all your bioinformatics project files.
 
