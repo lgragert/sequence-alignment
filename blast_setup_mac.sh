@@ -39,4 +39,5 @@ gunzip *.gz
 
 # Creates BLAST database from viral protein FASTA file
 # Should make .phr, .pin, and .psq files if successful
+# Command will not work if there's a space in a directory name
 makeblastdb -in viral.1.protein.faa -dbtype prot
