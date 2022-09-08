@@ -48,9 +48,9 @@ gunzip *.gz
 makeblastdb -in viral.1.protein.faa -dbtype prot
 
 # Make aliases for Python3 for Python /usr/bin/env python3 header to work
-PATH=/cygdrive/c/Python39:$PATH # add path for session
-echo 'export PATH="/cygdrive/c/Python39:$PATH"' >> ~/.bash_profile
-cp /cygdrive/c/Python39/python.exe /cygdrive/c/Python39/python3.exe
+PATH=/cygdrive/c/Python310:$PATH # add path for session
+echo 'export PATH="/cygdrive/c/Python310:$PATH"' >> ~/.bash_profile
+cp /cygdrive/c/Python310/python.exe /cygdrive/c/Python310/python3.exe
 
 # install BioPython module using pip3
 # Pip is the package manager for Python modules
