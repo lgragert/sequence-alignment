@@ -53,14 +53,14 @@ Install Lynx and other tools using Powershell
 
 ```
 cd C:\cygwin64\
-./cygwinsetup.exe -q -P wget,tar,gawk,bzip2,vim,lynx,make,httpd,curl,mintty
+./cygwinsetup.exe -q -P wget,tar,gawk,bzip2,vim,lynx,make,httpd,curl,mintty,unzip
 ```
 
 On some systems Cygwin is installing to a different directory C:\tools\cygwin\. If so, try this set of commands as an alternative.
 
 ```
 cd C:\tools\cygwin\
-./cygwinsetup.exe -q -P wget,tar,gawk,bzip2,vim,lynx,make,httpd,curl,mintty
+./cygwinsetup.exe -q -P wget,tar,gawk,bzip2,vim,lynx,make,httpd,curl,mintty,unzip
 ```
 
 Close MS PowerShell and Use Cygwin from here
