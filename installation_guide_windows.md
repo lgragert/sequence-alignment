@@ -161,9 +161,13 @@ choco install r.project
 choco install r.studio
 ```
 
+# 7zip - Compression tools
 
+```
+choco install 7zip
+```
 
-#### IDE sfor Python - Integrated development environment with debugger
+#### IDE for Python - Integrated development environment with debugger
 
 PyCharm community
 
