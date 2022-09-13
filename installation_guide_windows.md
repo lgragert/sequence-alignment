@@ -108,9 +108,10 @@ In Explorer - Right-click file -> Open With -> Visual Studio Code
 
 ```
 choco install git
+export PATH=$PATH:"/cygdrive/C/Program\ Files/Git/bin/"
 ```
 
-You may have to restart Cygwin to apply this command:
+Restart Cygwin and apply this command:
 
 ```
 git config --global core.autocrlf false
