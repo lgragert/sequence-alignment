@@ -52,13 +52,13 @@ cpan -fi Bundle::Apache
 cpan -fi SOAP::Lite
 
 # Download T-Coffee Source Distribution using curl
-curl -OL http://www.tcoffee.org/Packages/Stable/Latest/T-COFFEE_distribution_Version_13.41.0.28bdc39.tar.gz
+curl -OL https://s3.eu-central-1.amazonaws.com/tcoffee-packages/Beta/Latest/T-COFFEE_distribution_Version_13.45.60.cd84d2a.tar.gz
 
 # Extract T-Coffee source code archive
-tar xvf T-COFFEE_distribution_Version_13.41.0.28bdc39.tar.gz
+tar xvf T-COFFEE_distribution_Version_13.45.60.cd84d2a.tar.gz
 
 # Compile and Install T-Coffee and select plugins
-cd T-COFFEE_distribution_Version_13.41.0.28bdc39
+cd T-COFFEE_distribution_Version_13.45.60.cd84d2a
 ./install tcoffee
 ./install all
 
