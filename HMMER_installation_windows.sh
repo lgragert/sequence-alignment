@@ -10,7 +10,7 @@ apt-cyg install gcc-core
 apt-cyg install make
 
 # unpack
-tar zvf hmmer-3.3.2.tar.gz
+tar -zvxf hmmer-3.3.2.tar.gz
 cd hmmer-3.3.2
 
 # Compile the software with configure and make - Installs in /usr/local/bin/
