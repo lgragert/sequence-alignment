@@ -42,10 +42,12 @@ cd clustal-omega-1.2.4
 ./configure CFLAGS="-I/usr/local/include -I/opt/homebrew/Cellar/argtable/2.13/include" LDFLAGS="-L/usr/local/lib -L/opt/homebrew/Cellar/argtable/2.13/lib" --prefix="/usr/local"
 make
 sudo make install
+cd ..
 
-# MUSCLE - no longer available
+# MUSCLE - no longer available and binaries don't seem to work
 
 # brew install muscle
+# curl -OL https://github.com/rcedgar/muscle/releases/download/5.1.0/muscle5.1.macos_arm64
 
 #############################################################################################################################################################
 # T-COFFEE installation on MacOS
@@ -80,6 +82,6 @@ t_coffee -version
 # To run CLUSTAL W and MUSCLE using biopython, run the commands from Bash shell
 
 python3 biopython_clustalw.py
-python3 biopython_muscle.py
+# python3 biopython_muscle.py
 python3 biopython_tcoffee.py
 
