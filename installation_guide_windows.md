@@ -37,7 +37,8 @@ choco feature enable -n allowGlobalConfirmation
 If McAfee is blocking PowerShell from connecting to Internet
 try these instructions.
 
-https://service.mcafee.com/webcenter/portal/oracle/webcenter/page/scopedMD/s55728c97_466d_4ddb_952d_05484ea932c6/Page29.jspx?wc.contextURL=%2Fspaces%2Fcp&articleId=TS100813&_afrLoop=1019282233807360&leftWidth=0%25&showFooter=false&showHeader=false&rightWidth=0%25&centerWidth=100%25#!%40%40%3FshowFooter%3Dfalse%26_afrLoop%3D1019282233807360%26articleId%3DTS100813%26leftWidth%3D0%2525%26showHeader%3Dfalse%26wc.contextURL%3D%252Fspaces%252Fcp%26rightWidth%3D0%2525%26centerWidth%3D100%2525%26_adf.ctrl-state%3D1879qapug4_9
+https://www.mcafee.com/support/?locale=en-US&articleId=TS100813&page=shell&shell=article-view
+
 
 
 
@@ -126,8 +127,8 @@ Anaconda does not work with Cygwin and Chocolatey
 https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cygwin-on-windows/45291648
 
 ```
-choco install python3 --version=3.10.7
-cp /cygdrive/c/Python310/python.exe /usr/local/bin/python3.exe
+choco install python3 --version=3.11.5
+cp /cygdrive/c/Python311/python.exe /usr/local/bin/python3.exe
 ```
 
 

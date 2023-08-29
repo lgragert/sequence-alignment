@@ -35,20 +35,26 @@ curl -O http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg
 hdiutil attach ./clustalw-2.1-macosx.dmg
 cp /Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2 /usr/local/bin/
 
-brew install clustal-omega
+brew install argtable
+curl -O http://www.clustal.org/omega/clustal-omega-1.2.4.tar.gz
+tar zxvf clustal-omega-1.2.4.tar.gz
+cd clustal-omega-1.2.4
+./configure CFLAGS="-I/usr/local/include -I/opt/homebrew/Cellar/argtable/2.13/include" LDFLAGS="-L/usr/local/lib -L/opt/homebrew/Cellar/argtable/2.13/lib" --prefix="/usr/local"
+make
+sudo make install
 
-# MUSCLE
+# MUSCLE - no longer available
 
-brew install muscle
+# brew install muscle
 
 #############################################################################################################################################################
 # T-COFFEE installation on MacOS
 #############################################################################################################################################################
 
 # Downloads and run installer
-curl -OL https://s3.eu-central-1.amazonaws.com/tcoffee-packages/Beta/Latest/T-COFFEE_distribution_Version_13.45.60.cd84d2a.tar.gz
-tar xvfz T-COFFEE_distribution_Version_13.45.60.cd84d2a.tar.gz
-cd T-COFFEE_distribution_Version_13.45.60.cd84d2a
+curl -OL https://s3.eu-central-1.amazonaws.com/tcoffee-packages/Stable/Latest/T-COFFEE_distribution_Version_13.46.0.919e8c6b.tar.gz
+tar xvfz T-COFFEE_distribution_Version_13.46.0.919e8c6b.tar.gz
+cd T-COFFEE_distribution_Version_13.46.0.919e8c6b
 
 
 ./install tcoffee

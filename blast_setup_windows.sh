@@ -14,11 +14,11 @@ install apt-cyg /bin
 apt-cyg install curl
 
 # Downloads BLAST Windows install - compressed using tar and gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.13.0+-x64-win64.tar.gz
+curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.14.1+-x64-win64.tar.gz
 
 # Uncompresses BLAST distribution
 tar xzf ncbi-*.tar.gz
-cd ncbi-blast-2.13.0+
+cd ncbi-blast-2.14.1+
 
 # copies BLAST binaries to /usr/local/ and add directory to PATH
 cd bin
@@ -48,9 +48,9 @@ gunzip *.gz
 makeblastdb -in viral.1.protein.faa -dbtype prot
 
 # Make aliases for Python3 for Python /usr/bin/env python3 header to work
-PATH=/cygdrive/c/Python310:$PATH # add path for session
-echo 'export PATH="/cygdrive/c/Python310:$PATH"' >> ~/.bash_profile
-cp /cygdrive/c/Python310/python.exe /cygdrive/c/Python310/python3.exe
+PATH=/cygdrive/c/Python311:$PATH # add path for session
+echo 'export PATH="/cygdrive/c/Python311:$PATH"' >> ~/.bash_profile
+cp /cygdrive/c/Python311/python.exe /cygdrive/c/Python311/python3.exe
 
 # install BioPython module using pip3
 # Pip is the package manager for Python modules
