@@ -13,6 +13,8 @@
 
 # Permission denied error? - run script with "sudo bash blast_setup_mac.sh"
 
+# Make sure there are no spaces in the directory names for the path
+
 # Downloads BLAST Mac install - compressed using tar and gzip
 curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.14.1+-x64-macosx.tar.gz
 
