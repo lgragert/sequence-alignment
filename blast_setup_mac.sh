@@ -16,11 +16,19 @@
 
 # This script can be run with "bash blast_setup_mac.sh" in terminal
 
+# Detect CPU architecture and download appropriate BLAST version
+ARCH=$(uname -m)
+if [ "$ARCH" = "arm64" ]; then
+    BLAST_ARCH="aarch64"
+else
+    BLAST_ARCH="x64"
+fi
+
 # Downloads BLAST Mac install - compressed using tar and gzip
-curl -O https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.17.0+-x64-macosx.tar.gz
+curl -O "https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.17.0+-${BLAST_ARCH}-macosx.tar.gz"
 
 # Uncompresses BLAST distribution to current directory
-tar xzf ncbi-blast-2.17.0+-x64-macosx.tar.gz
+tar xzf "ncbi-blast-2.17.0+-${BLAST_ARCH}-macosx.tar.gz"
 
 # Add BLAST binaries to PATH (local install - no sudo needed)
 export PATH="$PWD/ncbi-blast-2.17.0+/bin:$PATH"
