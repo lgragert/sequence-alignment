@@ -26,55 +26,29 @@
 # Download and Install CLUSTAL and MUSCLE on your system
 ###############################################################################
 
-# From Unix terminal change directory to the current directory where you have 
+# From Unix terminal change directory to the current directory where you have
 # all the files
+
+# Add the bioinformatics tap
+brew tap brewsci/bio
 
 # CLUSTALW and Clustal Omega
 # NOTE: CLUSTALW 2.1 is from 2009 and is superseded by Clustal Omega.
 # Consider using Clustal Omega for new projects.
+brew install clustal-w
+brew install clustal-omega
 
-curl -O https://www.clustal.org/download/current/clustalw-2.1-macosx.dmg
-hdiutil attach ./clustalw-2.1-macosx.dmg
-cp /Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2 /usr/local/bin/
+# MUSCLE
+brew install muscle
 
-brew install argtable
-curl -O https://www.clustal.org/omega/clustal-omega-1.2.4.tar.gz
-tar zxvf clustal-omega-1.2.4.tar.gz
-cd clustal-omega-1.2.4
-./configure CFLAGS="-I/usr/local/include -I/opt/homebrew/Cellar/argtable/2.13/include" LDFLAGS="-L/usr/local/lib -L/opt/homebrew/Cellar/argtable/2.13/lib" --prefix="/usr/local"
-make
-sudo make install
-cd ..
+# T-COFFEE
+brew install t-coffee
 
-# MUSCLE 5 Installation
-# Download MUSCLE 5.1 from GitHub releases (ARM Mac version)
-curl -OL https://github.com/rcedgar/muscle/releases/download/5.1.0/muscle5.1.macos_arm64
-chmod +x muscle5.1.macos_arm64
-cp muscle5.1.macos_arm64 /usr/local/bin/muscle
-
-#############################################################################################################################################################
-# T-COFFEE installation on MacOS
-#############################################################################################################################################################
-
-# Downloads and run installer
-curl -OL https://s3.eu-central-1.amazonaws.com/tcoffee-packages/Stable/Latest/T-COFFEE_distribution_Version_13.46.0.919e8c6b.tar.gz
-tar xvfz T-COFFEE_distribution_Version_13.46.0.919e8c6b.tar.gz
-cd T-COFFEE_distribution_Version_13.46.0.919e8c6b
-
-
-./install tcoffee
-./install all
-
-# add t_coffee to path and Bash config file
-
-export PATH=~/.t_coffee/bin/macosx:$PATH
-export PLUGINS_4_TCOFFEE=~/.t_coffee/plugins/macosx:
-echo 'export PATH="~/.t_coffee/bin/macosx:$PATH"' >> ~/.bash_profile
-echo 'export PLUGINS_4_TCOFFEE="~/.t_coffee/plugins/macosx:"' >> ~/.bash_profile
-source ~/.bash_profile
-
-# go back to working directory and check version
-cd ..
+# Verify installations
+echo "Verifying installations..."
+clustalw2 -help | head -5
+clustalo --version
+muscle -version
 t_coffee -version
 
 
