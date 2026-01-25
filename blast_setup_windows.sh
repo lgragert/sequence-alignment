@@ -14,11 +14,11 @@ install apt-cyg /bin
 apt-cyg install curl
 
 # Downloads BLAST Windows install - compressed using tar and gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.14.1+-x64-win64.tar.gz
+curl -O https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.17.0+-x64-win64.tar.gz
 
 # Uncompresses BLAST distribution
 tar xzf ncbi-*.tar.gz
-cd ncbi-blast-2.14.1+
+cd ncbi-blast-2.17.0+
 
 # copies BLAST binaries to /usr/local/ and add directory to PATH
 cd bin
@@ -40,7 +40,7 @@ mkdir blastdb
 cd blastdb
 
 # Downloads and uncompressed viral protein FASTA file - compressed with gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz
+curl -O https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz
 gunzip *.gz
 
 # Creates BLAST database from viral protein FASTA file
@@ -48,9 +48,10 @@ gunzip *.gz
 makeblastdb -in viral.1.protein.faa -dbtype prot
 
 # Make aliases for Python3 for Python /usr/bin/env python3 header to work
-PATH=/cygdrive/c/Python311:$PATH # add path for session
-echo 'export PATH="/cygdrive/c/Python311:$PATH"' >> ~/.bash_profile
-cp /cygdrive/c/Python311/python.exe /cygdrive/c/Python311/python3.exe
+# Update the Python version below to match your installed version (e.g., Python313 for Python 3.13)
+PATH=/cygdrive/c/Python313:$PATH # add path for session
+echo 'export PATH="/cygdrive/c/Python313:$PATH"' >> ~/.bash_profile
+cp /cygdrive/c/Python313/python.exe /cygdrive/c/Python313/python3.exe
 
 # install BioPython module using pip3
 # Pip is the package manager for Python modules

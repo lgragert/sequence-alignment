@@ -3,7 +3,7 @@
 # Make sure you are in working directory with scripts
 
 #Download HMMER
-curl -OL http://eddylab.org/software/hmmer/hmmer-3.4.tar.gz
+curl -OL https://eddylab.org/software/hmmer/hmmer-3.4.tar.gz
 
 # Install GCC compiler and make
 apt-cyg install gcc-core

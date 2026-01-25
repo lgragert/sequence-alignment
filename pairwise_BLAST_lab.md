@@ -11,8 +11,8 @@ Tulane School of Medicine
 ## INSTALLATION INSTRUCTIONS
 
 
-If you have MacOS, follow the text file `installation_guide_mac.txt`
-If you have Windows, follow the text file `installation_guide_windows.txt`
+If you have MacOS, follow the text file `installation_guide_mac.md`
+If you have Windows, follow the text file `installation_guide_windows.md`
 
 
 

@@ -16,11 +16,11 @@
 # Make sure there are no spaces in the directory names for the path
 
 # Downloads BLAST Mac install - compressed using tar and gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.14.1+-x64-macosx.tar.gz
+curl -O https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.17.0+-x64-macosx.tar.gz
 
 # Uncompresses BLAST distribution
-tar xzf ncbi-blast-2.14.1+-x64-macosx.tar.gz
-cd ncbi-blast-2.14.1+
+tar xzf ncbi-blast-2.17.0+-x64-macosx.tar.gz
+cd ncbi-blast-2.17.0+
 
 # copies BLAST binaries to /usr/local/ and add directory to PATH
 cd bin
@@ -36,7 +36,7 @@ mkdir blastdb
 cd blastdb
 
 # Downloads and uncompressed viral protein FASTA file - compressed with gzip
-curl -O ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz
+curl -O https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz
 gunzip *.gz
 
 # Creates BLAST database from viral protein FASTA file

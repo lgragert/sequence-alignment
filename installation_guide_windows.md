@@ -127,8 +127,8 @@ Anaconda does not work with Cygwin and Chocolatey
 https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cygwin-on-windows/45291648
 
 ```
-choco install python3 --version=3.11.5
-cp /cygdrive/c/Python311/python.exe /usr/local/bin/python3.exe
+choco install python3 --version=3.13.1
+cp /cygdrive/c/Python313/python.exe /usr/local/bin/python3.exe
 ```
 
 

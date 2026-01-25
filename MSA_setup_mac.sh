@@ -30,13 +30,15 @@
 # all the files
 
 # CLUSTALW and Clustal Omega
+# NOTE: CLUSTALW 2.1 is from 2009 and is superseded by Clustal Omega.
+# Consider using Clustal Omega for new projects.
 
-curl -O http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg
+curl -O https://www.clustal.org/download/current/clustalw-2.1-macosx.dmg
 hdiutil attach ./clustalw-2.1-macosx.dmg
 cp /Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2 /usr/local/bin/
 
 brew install argtable
-curl -O http://www.clustal.org/omega/clustal-omega-1.2.4.tar.gz
+curl -O https://www.clustal.org/omega/clustal-omega-1.2.4.tar.gz
 tar zxvf clustal-omega-1.2.4.tar.gz
 cd clustal-omega-1.2.4
 ./configure CFLAGS="-I/usr/local/include -I/opt/homebrew/Cellar/argtable/2.13/include" LDFLAGS="-L/usr/local/lib -L/opt/homebrew/Cellar/argtable/2.13/lib" --prefix="/usr/local"
@@ -44,10 +46,11 @@ make
 sudo make install
 cd ..
 
-# MUSCLE - no longer available and binaries don't seem to work
-
-# brew install muscle
-# curl -OL https://github.com/rcedgar/muscle/releases/download/5.1.0/muscle5.1.macos_arm64
+# MUSCLE 5 Installation
+# Download MUSCLE 5.1 from GitHub releases (ARM Mac version)
+curl -OL https://github.com/rcedgar/muscle/releases/download/5.1.0/muscle5.1.macos_arm64
+chmod +x muscle5.1.macos_arm64
+cp muscle5.1.macos_arm64 /usr/local/bin/muscle
 
 #############################################################################################################################################################
 # T-COFFEE installation on MacOS

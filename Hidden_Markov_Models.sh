@@ -47,6 +47,5 @@ python3 biopython_clustalw_hiv.py
 # Run HMMSCAN
 bash hmm.sh
 
-# Parses the HMMSCAN output with Python
 
 python3 hmm_scan_parser.py

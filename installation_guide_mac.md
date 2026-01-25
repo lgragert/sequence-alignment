@@ -4,7 +4,6 @@ Open MacOS Terminal program.
 Copy and paste commands between backticks ``` (or grey boxes on GitHub webpage)
 
 
-
 #### Make sure Xcode command line tools are installed
 
 ```
@@ -32,9 +31,6 @@ brew install curl
 ```
 brew tap brewsci/bio
 brew tap buo/cask-upgrade
-brew tap homebrew/cask-drivers
-brew tap homebrew/cask-fonts
-brew tap homebrew/cask-versions
 ```
 
 
@@ -164,6 +160,6 @@ pip3 list --outdated --format=freeze | awk 'BEGIN { FS = "=" } ; { print $1 }' |
 This command updates all installed R packages:
 
 ```
-Rscript -e 'update.packages(ask=FALSE,dependencies=c("Suggests"),repos="http://cran.wustl.edu/")'
+Rscript -e 'update.packages(ask=FALSE,dependencies=c("Suggests"),repos="https://cloud.r-project.org")'
 ```
 
