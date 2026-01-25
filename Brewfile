@@ -1,5 +1,4 @@
 tap "brewsci/bio"
-brew "blast"
 brew "curl"
 brew "python3"
 brew "p7zip"
