@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 ### Build Profile hidden markov models with CLUSTAL 2.1 multiple sequence alignment files 
 hmmbuild MSA.hmm MSA_sequences_file.aln

@@ -1,6 +1,6 @@
 # WINDOWS SOFTWARE INSTALLATION GUIDE
 
-
+> **Note:** If you prefer a Linux environment, consider using WSL2 (Windows Subsystem for Linux) instead of Cygwin. See [windows_wsl_guide.md](windows_wsl_guide.md) for instructions.
 
 #### Chocolatey package manager (https://chocolatey.org/)
 
@@ -127,8 +127,19 @@ Anaconda does not work with Cygwin and Chocolatey
 https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cygwin-on-windows/45291648
 
 ```
-choco install python3 --version=3.13.1
-cp /cygdrive/c/Python313/python.exe /usr/local/bin/python3.exe
+choco install python3
+```
+
+After installation, find your Python install location and create a symlink in Cygwin.
+The install path varies by version (e.g., `C:\Python313` for 3.13, `C:\Python314` for 3.14):
+
+```
+cp /cygdrive/c/Python3*/python.exe /usr/local/bin/python3.exe
+```
+
+If Python installed to a different location (e.g., AppData), adjust the path accordingly:
+```
+cp /cygdrive/c/Users/$USER/AppData/Local/Programs/Python/Python3*/python.exe /usr/local/bin/python3.exe
 ```
 
 
@@ -159,7 +170,7 @@ pip3 install jupyterlab
 
 ```
 choco install r.project
-choco install r.studio
+choco install rstudio
 ```
 
 # 7zip - Compression tools
@@ -232,7 +243,7 @@ choco upgrade all
 
 Can also choose a specific package to update - See all commands here
 
-https://github.com/chocolatey/choco/wiki/CommandsUpgrade
+https://docs.chocolatey.org/en-us/choco/commands/upgrade
 
 This command updates all installed Python packages:
 

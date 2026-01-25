@@ -3,7 +3,8 @@
 # Pairwise Sequence Alignment and Basic Local Alignment Search Tool (BLAST)
 
 Loren Gragert, PhD
-Department of Pathology and Laboratory Medicine
+Department of Medicine
+Division of Biomedical Informatics and Genomics
 Tulane School of Medicine
 
 

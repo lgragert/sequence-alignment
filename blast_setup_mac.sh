@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # BLAST Installation and Database Setup for MacOS
 # Downloads BLAST and installs locally (no sudo required)
