@@ -59,34 +59,106 @@ brew install visual-studio-code
 
 
 
-#### Python 3 Install
+#### Python 3.14 Install
 
-We're going to install the base Python distribution instead of Anaconda for consistency with the Windows Cygwin environment.
-
-```
-brew install python3
-```
-
-
-
-#### BioPython module install
-
-Pip3 is the package manager for Python modules - Don't worry about DEPRECATION warnings
+We install a specific Python version to ensure consistency across all students.
 
 ```
-pip3 install biopython
-pip3 install scipy
-pip3 install pandas
+brew install python@3.14
 ```
 
-If you already have Anaconda installed, use `conda` instead of `pip3`
-
-
-
-#### Jupyter Notebook to run Python code interactively
+Verify the installation:
 
 ```
-pip3 install jupyterlab
+python3.14 --version
+```
+
+
+
+#### uv Package Manager
+
+`uv` is a modern, fast Python package manager (10-100x faster than pip).
+
+```
+brew install uv
+```
+
+Verify installation:
+
+```
+uv --version
+```
+
+
+
+#### Create a Virtual Environment
+
+A virtual environment isolates Python packages for this project. Navigate to the course directory and create the environment:
+
+```
+cd ~/dev/sequence-alignment
+python3.14 -m venv .venv
+```
+
+
+
+#### Activate the Virtual Environment
+
+**You must activate the virtual environment each time you open a new terminal:**
+
+```
+source ~/dev/sequence-alignment/.venv/bin/activate
+```
+
+Your prompt will show `(.venv)` when activated. To deactivate:
+
+```
+deactivate
+```
+
+**Tip:** Add a convenience alias to your shell config:
+
+```
+echo 'alias bioenv="source ~/dev/sequence-alignment/.venv/bin/activate"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+Then simply type `bioenv` to activate.
+
+
+
+#### Install BioPython and Packages
+
+With the virtual environment activated, install packages using `uv`:
+
+```
+uv pip install biopython
+```
+
+For optional data analysis tools:
+
+```
+uv pip install scipy pandas
+```
+
+Or install everything from the project file:
+
+```
+uv pip install -e ".[all]"
+```
+
+
+
+#### Jupyter Notebook (Optional)
+
+```
+uv pip install jupyterlab
+```
+
+To launch Jupyter:
+
+```
+jupyter lab
 ```
 
 
@@ -121,16 +193,6 @@ brew install google-chrome
 
 
 
-#### Switch default shell to Bash:
-
-```
-chsh -s /bin/bash
-```
-
-Default shell for MacOS is `zsh`, which might cause inconsistencies between MacOS versions that could impact our scripts.
-
-
-
 #### Clone the sequence-alignment Github repository for the class:
 
 Contains the scripts for the in-class labs on sequence alignment.
@@ -151,10 +213,10 @@ brew update && brew upgrade && brew cleanup
 brew cu --all
 ```
 
-This command updates all installed Python packages:
+To update Python packages in your virtual environment (activate it first):
 
 ```
-pip3 list --outdated --format=freeze | awk 'BEGIN { FS = "=" } ; { print $1 }' | xargs -n1 pip3 install -U
+uv pip install --upgrade biopython scipy pandas jupyterlab
 ```
 
 This command updates all installed R packages:

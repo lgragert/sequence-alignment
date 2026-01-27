@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 ##############################################################################
 # Multiple Sequence Alignment - In-Class Lab
@@ -41,14 +41,33 @@ brew install clustal-omega
 # MUSCLE
 brew install muscle
 
-# T-COFFEE
-brew install t-coffee
-
-# Verify installations
+# Verify Homebrew installations
 echo "Verifying installations..."
 clustalw2 -help | head -5
 clustalo --version
 muscle -version
+
+###############################################################################
+# T-COFFEE installation on MacOS (manual install - not available in Homebrew)
+###############################################################################
+
+# Download and run installer
+curl -OL https://s3.eu-central-1.amazonaws.com/tcoffee-packages/Stable/Latest/T-COFFEE_distribution_Version_13.46.0.919e8c6b.tar.gz
+tar xvfz T-COFFEE_distribution_Version_13.46.0.919e8c6b.tar.gz
+cd T-COFFEE_distribution_Version_13.46.0.919e8c6b
+
+./install tcoffee
+./install all
+
+# Add t_coffee to PATH and zsh config file
+export PATH=~/.t_coffee/bin/macosx:$PATH
+export PLUGINS_4_TCOFFEE=~/.t_coffee/plugins/macosx:
+echo 'export PATH="~/.t_coffee/bin/macosx:$PATH"' >> ~/.zshrc
+echo 'export PLUGINS_4_TCOFFEE="~/.t_coffee/plugins/macosx:"' >> ~/.zshrc
+source ~/.zshrc
+
+# Go back to working directory and check version
+cd ..
 t_coffee -version
 
 
@@ -56,9 +75,27 @@ t_coffee -version
 # Running CLUSTAL W and MUSCLE and T-COFFEE with BIOPYTHON
 ###############################################################################
 
-# To run CLUSTAL W and MUSCLE using biopython, run the commands from Bash shell
+# Use virtual environment Python
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+VENV_PYTHON="$SCRIPT_DIR/.venv/bin/python"
 
-python3 biopython_clustalw.py
-# python3 biopython_muscle.py
-python3 biopython_tcoffee.py
+if [ ! -f "$VENV_PYTHON" ]; then
+    echo "=============================================="
+    echo "ERROR: Virtual environment not found!"
+    echo "=============================================="
+    echo ""
+    echo "Please set up the environment first:"
+    echo "  cd $SCRIPT_DIR"
+    echo "  python3.14 -m venv .venv"
+    echo "  source .venv/bin/activate"
+    echo "  uv pip install biopython"
+    echo ""
+    exit 1
+fi
+
+echo "Using Python from virtual environment: $VENV_PYTHON"
+
+$VENV_PYTHON biopython_clustalw.py
+# $VENV_PYTHON biopython_muscle.py
+$VENV_PYTHON biopython_tcoffee.py
 

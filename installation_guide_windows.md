@@ -148,13 +148,14 @@ cp /cygdrive/c/Users/$USER/AppData/Local/Programs/Python/Python3*/python.exe /us
 
 Close and reopen Cygwin window so that the python3 command will be recognized.
 
+> **Note:** On Windows/Cygwin, we install packages system-wide using pip (not virtual environments) for simplicity. Virtual environments can be problematic on Cygwin. For a more modern approach, consider using WSL2 instead.
+
 pip3 is the package manager for Python modules
 
 ```
 python3 -m pip install --upgrade pip
-pip3 install biopython
-pip3 install scipy
-pip3 install pandas
+python3 -m pip install biopython
+python3 -m pip install scipy pandas
 ```
 
 

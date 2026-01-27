@@ -39,8 +39,32 @@ Linux packages can be installed with `apt`, which is the package manager for Ubu
 
 ```bash
 sudo apt update
-sudo apt install python3 python3-pip
+sudo apt install python3 python3-pip python3-venv
 ```
+
+**Python Virtual Environment Setup (Recommended):**
+
+WSL2 supports the same modern Python workflow as macOS. Set up a virtual environment with `uv`:
+
+```bash
+# Install uv package manager
+pip install uv
+
+# Navigate to project directory
+cd /mnt/c/Users/YourUsername/path/to/sequence-alignment
+
+# Create virtual environment
+python3 -m venv .venv
+
+# Activate it
+source .venv/bin/activate
+
+# Install packages with uv
+uv pip install biopython
+uv pip install scipy pandas  # optional
+```
+
+Remember to activate the virtual environment (`source .venv/bin/activate`) each time you open a new terminal.
 
 **Running Course Scripts:**
 

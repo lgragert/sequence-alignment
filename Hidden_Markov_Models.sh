@@ -39,13 +39,30 @@
 # bash HMMER_installation_mac.sh
 ###############################################################################
 
+# Use virtual environment Python
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+VENV_PYTHON="$SCRIPT_DIR/.venv/bin/python"
+
+if [ ! -f "$VENV_PYTHON" ]; then
+    echo "=============================================="
+    echo "ERROR: Virtual environment not found!"
+    echo "=============================================="
+    echo ""
+    echo "Please set up the environment first:"
+    echo "  cd $SCRIPT_DIR"
+    echo "  python3.14 -m venv .venv"
+    echo "  source .venv/bin/activate"
+    echo "  uv pip install biopython"
+    echo ""
+    exit 1
+fi
+
 # Create profile hidden markov models and align new sequence to models
 
-python3 biopython_clustalw.py
-python3 biopython_clustalw_hiv.py
+$VENV_PYTHON biopython_clustalw.py
+$VENV_PYTHON biopython_clustalw_hiv.py
 
 # Run HMMSCAN
-bash hmm.sh
+zsh hmm.sh
 
-
-python3 hmm_scan_parser.py
+$VENV_PYTHON hmm_scan_parser.py
